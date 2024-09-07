@@ -81,9 +81,10 @@ Open your browser and go to http://localhost:3000 to view the project.
 Feel free to fork this repository and submit pull requests if you have suggestions or improvements. For bug reports or feature requests, please open an issue.
 
 ### Links
-- **GitHub Repository:** Your GitHub Repo
-- **LinkedIn:** Your LinkedIn Profile
-- **Twitter:** Your Twitter Handle
+- **Old Portfolio:** [PortFolio](https://tusharbhardwaj.vercel.app/)
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/bhardwajtushar2004/)
+- **Connect 1:1** [Topmate](https://topmate.io/tusharbhardwaj)
+
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
