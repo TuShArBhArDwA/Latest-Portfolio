@@ -6,15 +6,15 @@ Welcome to my personal portfolio website repository!
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Technologies Used](#technologies-used)
+- [Tech Stack](#tech-stack)
 - [Live Demo](#live-demo)
 - [Quick Start](#quick-start)
   - [Prerequisites](#prerequisites)
   - [Cloning the Repository](#cloning-the-repository)
   - [Installation](#installation)
   - [Running the Project](#running-the-project)
-- [Usage](#usage)
 - [Contributing](#contributing)
+- [Links](#links)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
