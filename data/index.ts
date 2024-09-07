@@ -1,7 +1,7 @@
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Work Experience", link: "#work" },
     { name: "Contact", link: "#contact" },
   ];
   
@@ -74,32 +74,32 @@ export const navItems = [
       id: 1,
       title: "N-Queens Visualizer - Web Application",
       des: "Unleash the power of strategy with this mesmerizing 3D visualization of the N-Queens problem, brought to life using Javascript",
-      img: "/p1.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+      img: "/p1.png",
+      iconLists: ["/html.png", "/css.jpeg", "/js.png" ],
       link: "https://github.com/TuShArBhArDwA/N-Queen_Visualizer",
     },
     {
       id: 2,
       title: "TeleScript Caller - Backend Design",
       des: "Streamline your communication with this Python script that automates phone calls by making API requests to a server with custom scripts.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+      img: "/p2.png",
+      iconLists: ["python.jpeg"],
       link: "https://github.com/TuShArBhArDwA/TeleScript-Caller",
     },
     {
       id: 3,
       title: "eVoteX-Voting_System - Web Design",
       des: "Elevate your voting process with eVoteX—a secure and user-friendly terminal-based voting system in C, featuring encryption, authentication, and real-time vote counting for a reliable and engaging experience.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      img: "/p3.png",
+      iconLists: ["/c.svg"],
       link: "https://github.com/TuShArBhArDwA/eVoteX-Online-Voting-System",
     },
     {
       id: 4,
       title: "Loan Calculator - Web Application",
       des: "Developed a web application in Angular for calculating loan payments with simple interest, featuring an intuitive interface and visual graphs for clear, interactive results.",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+      img: "/p4.png",
+      iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
     },
   ];
@@ -173,31 +173,31 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Frontend Engineer Intern",
-      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      title: "Lead Frontend Developer - CodSoft",
+      desc: "Led the development of an eCommerce website, enhancing user experience and functionality by designing intuitive interfaces.",
       className: "md:col-span-2",
-      thumbnail: "/exp1.svg",
+      thumbnail: "/exp4.svg",
     },
     {
       id: 2,
-      title: "Mobile App Dev - JSM Tech",
-      desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+      title: "Content Problem Reviewer and Solution Author - Leetcode",
+      desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
     },
+    // {
+    //   id: 3,
+    //   title: "Freelance App Dev Project",
+    //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    //   className: "md:col-span-2", // change to md:col-span-2
+    //   thumbnail: "/exp3.svg",
+    // },
     {
       id: 3,
-      title: "Freelance App Dev Project",
-      desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-      className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp3.svg",
-    },
-    {
-      id: 4,
-      title: "Lead Frontend Developer",
-      desc: "Developed and maintained user-facing features using modern frontend technologies.",
+      title: "Technical Head - Apna College LPU",
+      desc: "Directing the technical team in developing and implementing innovative solutions for the Apna College LPU club.",
       className: "md:col-span-2",
-      thumbnail: "/exp4.svg",
+      thumbnail: "/exp1.svg",
     },
   ];
   
