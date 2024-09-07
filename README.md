@@ -1,5 +1,7 @@
 # Portfolio Website 🌐
 
+
+![image](https://github.com/user-attachments/assets/3976cc2e-2204-46f6-bbea-886768d115c7)
 Welcome to my personal portfolio website repository! 
 
 ## Table of Contents
