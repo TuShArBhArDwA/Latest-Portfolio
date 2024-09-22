@@ -171,15 +171,15 @@ export const navItems = [
   ];
   
   export const workExperience = [
+    // {
+    //   id: 1,
+    //   title: "Lead Frontend Developer - CodSoft",
+    //   desc: "Led the development of an eCommerce website, enhancing user experience and functionality by designing intuitive interfaces.",
+    //   className: "md:col-span-2",
+    //   thumbnail: "/exp4.svg",
+    // },
     {
       id: 1,
-      title: "Lead Frontend Developer - CodSoft",
-      desc: "Led the development of an eCommerce website, enhancing user experience and functionality by designing intuitive interfaces.",
-      className: "md:col-span-2",
-      thumbnail: "/exp4.svg",
-    },
-    {
-      id: 2,
       title: "Content Problem Reviewer and Solution Author - Leetcode",
       desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
       className: "md:col-span-2", // change to md:col-span-2
@@ -193,7 +193,7 @@ export const navItems = [
     //   thumbnail: "/exp3.svg",
     // },
     {
-      id: 3,
+      id: 2,
       title: "Technical Head - Apna College LPU",
       desc: "Directing the technical team in developing and implementing innovative solutions for the Apna College LPU club.",
       className: "md:col-span-2",
