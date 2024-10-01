@@ -174,7 +174,7 @@ export const navItems = [
     {
       id: 1,
       title: "Website Developer",
-      desc: "Worked on client projects, developing websites and bots that enhanced user experience and functionality by designing intuitive, user-friendly interfaces.",
+      desc: "Working on client projects, developing websites and bots that enhanced user experience and functionality by designing intuitive, user-friendly interfaces.",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
