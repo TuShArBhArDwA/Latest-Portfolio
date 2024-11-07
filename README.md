@@ -63,8 +63,8 @@ Ensure you have the following installed:
 Clone the repository using Git:
 
 ``` bash
-  git clone https://github.com/TuShArBhArDwA/your-portfolio-repo.git
-  cd your-portfolio-repo
+  git clone https://github.com/TuShArBhArDwA/Latest-Portfolio.git
+  cd Latest-Portfolio
 ```
 
 ### Installation
