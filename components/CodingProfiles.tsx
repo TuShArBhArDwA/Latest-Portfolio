@@ -7,28 +7,28 @@ const codingProfiles = [
     name: "LeetCode",
     url: "https://leetcode.com/u/Tusharr2004/",
     logo: "/leetcode-logo.svg",
-    description: "Solved over 780 questions with a streak of 400 days.",
+    description: "Solved over 790 questions with a streak of 415 days.",
   },
   {
     id: 2,
     name: "GeeksforGeeks",
     url: "https://www.geeksforgeeks.org/user/tusharbhard2004/",
     logo: "/gfg-logo.svg",
-    description: "Institute Rank 113, solved 460 questions with a streak of 235 days.",
+    description: "Institute Rank 110, solved 470 questions with a streak of 250 days.",
   },
   {
     id: 3,
     name: "CodeChef",
     url: "https://www.codechef.com/users/tushar2004b",
     logo: "/codelogo.svg",
-    description: "Division 3 with a streak of 605 days.",
+    description: "Division 3 with a streak of 620 days.",
   },
   {
     id: 4,
     name: "Coding Ninjas",
     url: "https://www.naukri.com/code360/profile/Bhar_dwajTushar",
     logo: "/cnlogo.svg",
-    description: "240 days streak.",
+    description: "250 days streak.",
   },
 ];
 
