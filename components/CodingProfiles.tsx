@@ -20,7 +20,8 @@ const codingProfiles = [
     id: 3,
     name: "CodeChef",
     url: "https://www.codechef.com/users/tushar2004b",
-    logo: "/codelogo.svg",
+    // logo: "/codelogo.svg",
+    logo: "/codechef.jfif",
     description: "Division 3 with a streak of 620 days.",
   },
   {
