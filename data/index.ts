@@ -71,14 +71,33 @@ export const navItems = [
   ];
   
   export const projects = [
+    
     {
       id: 1,
-      title: "N-Queens Visualizer - Web Application",
-      des: "Unleash the power of strategy with this mesmerizing 3D visualization of the N-Queens problem, brought to life using Javascript",
-      img: "/p1.png",
-      iconLists: ["/html.png", "/css.jpeg", "/js.png" ],
-      link: "https://github.com/TuShArBhArDwA/N-Queen_Visualizer",
+      title: "NextGen - AI Software Marketplace",
+      des: "Developed NextGen, a sleek and responsive website for showcasing and selling AI software, built to deliver a seamless user experience.",
+      img: "/nextgen.png",
+      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg"],
+      link: "https://nextgen-tau.vercel.app/",
     },
+    
+    {
+      id: 6,
+      title: "ENotes - Digital Notes Platform",
+      des: "Developed ENotes, a platform for secure and effortless sharing of academic resources with seamless navigation and a responsive user interface.",
+      img: "/enotes.png",
+      iconLists: ["/php.jfif","/mysql.jfif","/html.png", "/css.jpeg"],
+      link: "https://github.com/TuShArBhArDwA/ENotes",
+    },
+    {
+      id: 5,
+      title: "Raj Fashion - Ecommerce Website",
+      des: "Built an interactive eCommerce platform using React, featuring a user-friendly interface, advanced product filtering, and a responsive design for an exceptional shopping experience.",
+      img: "/rajfash.jpg",
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg"],
+      link: "https://raj-fashion.vercel.app/",
+    },
+    
     {
       id: 2,
       title: "TeleScript Caller - Backend Design",
@@ -88,20 +107,28 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/TeleScript-Caller",
     },
     {
-      id: 3,
-      title: "eVoteX-Voting_System - Web Design",
-      des: "Elevate your voting process with eVoteX—a secure and user-friendly terminal-based voting system in C, featuring encryption, authentication, and real-time vote counting for a reliable and engaging experience.",
-      img: "/p3.png",
-      iconLists: ["/c.svg"],
-      link: "https://github.com/TuShArBhArDwA/eVoteX-Online-Voting-System",
-    },
-    {
       id: 4,
       title: "Loan Calculator - Web Application",
       des: "Developed a web application in Angular for calculating loan payments with simple interest, featuring an intuitive interface and visual graphs for clear, interactive results.",
-      img: "/p4.png",
+      img: "/loan.jpg",
       iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
+    },
+    {
+      id: 7,
+      title: "N-Queens Visualizer - Web Application",
+      des: "Unleash the power of strategy with this mesmerizing 3D visualization of the N-Queens problem, brought to life using Javascript",
+      img: "/nqueen.jpg",
+      iconLists: ["/html.png", "/css.jpeg", "/js.png" ],
+      link: "https://n-queenvisualizer.vercel.app/",
+    },
+    {
+      id: 3,
+      title: "eVoteX-Voting_System - Web Design",
+      des: "Elevate your voting process with eVoteX—a secure and user-friendly terminal-based voting system in C, featuring encryption, authentication, and real-time vote counting for a reliable and engaging experience.",
+      img: "/onlinevote.jpg",
+      iconLists: ["/c.svg"],
+      link: "https://github.com/TuShArBhArDwA/eVoteX-Online-Voting-System",
     },
   ];
   
