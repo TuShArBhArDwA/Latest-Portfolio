@@ -26,7 +26,7 @@ const Hero = () => {
             words="Transforming Concepts into Seamless User Experiences"
             />
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                Hi, I&apos;m Tushar, a Full Stack Web Developer based in India.
+                Hi, I&apos;m Tushar, a Software Developer based in India.
             </p>
             <a href="#projects">
                 <MagicButton title="Show my work" icon={<FaLocationArrow />} position='right' />
