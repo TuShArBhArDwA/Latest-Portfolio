@@ -43,7 +43,7 @@ const Approach = () => {
           />
           </Card>
           <Card
-          title="Development & Launch"
+          title="Deployment & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           des="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your website
