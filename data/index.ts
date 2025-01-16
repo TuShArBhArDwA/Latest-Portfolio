@@ -207,19 +207,20 @@ export const navItems = [
       thumbnail: "/exp4.svg",
     },
     {
+      id: 3,
+      title: "Operations Interns",
+      desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
+      className: "md:col-span-2", // change to md:col-span-2
+      thumbnail: "/exp3.svg",
+    },
+    {
       id: 2,
       title: "Content Problem Reviewer and Solution Author - Leetcode",
       desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
     },
-    // {
-    //   id: 3,
-    //   title: "Freelance App Dev Project",
-    //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    //   className: "md:col-span-2", // change to md:col-span-2
-    //   thumbnail: "/exp3.svg",
-    // },
+    
     {
       id: 2,
       title: "Technical Head - Apna College LPU",
