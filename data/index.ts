@@ -82,6 +82,15 @@ export const navItems = [
     },
     
     {
+      id: 8,
+      title: "Maze Solver - Interactive Pathfinding Visualizer",
+      des: "An interactive online maze generator and solver able to use several different algorithms.",
+      img: "/nextgen.png",
+      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg"],
+      link: "https://mazesolve.vercel.app/",
+    },
+
+    {
       id: 6,
       title: "ENotes - Digital Notes Platform",
       des: "Developed ENotes, a platform for secure and effortless sharing of academic resources with seamless navigation and a responsive user interface.",
