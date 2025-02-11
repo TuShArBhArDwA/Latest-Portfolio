@@ -101,7 +101,7 @@ export const navItems = [
     {
       id: 5,
       title: "Raj Fashion",
-      des: "ECommerce platform with advanced filtering and a responsive, user-friendly design.",
+      des: "ECommerce platform with a responsive, user-friendly design.",
       img: "/rajfash.jpg",
       iconLists: ["/react.jfif","/html.png", "/css.jpeg"],
       link: "https://raj-fashion.vercel.app/",
