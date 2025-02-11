@@ -75,7 +75,7 @@ export const navItems = [
     {
       id: 1,
       title: "NextGen",
-      des: "Developed NextGen, a sleek and responsive website for showcasing and selling AI software, built to deliver a seamless user experience.",
+      des: "A sleek, responsive website for selling AI software seamlessly.",
       img: "/nextgen.png",
       iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg"],
       link: "https://nextgen-tau.vercel.app/",
