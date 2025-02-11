@@ -134,7 +134,7 @@ export const navItems = [
     {
       id: 3,
       title: "eVoteX Voting System",
-      des: "A secure and user-friendly terminal-based system featuring encryption, authentication, and real-time counting.",
+      des: "A secure, user-friendly terminal system with encryption and real-time counting.",
       img: "/onlinevote.jpg",
       iconLists: ["/c.svg"],
       link: "https://github.com/TuShArBhArDwA/eVoteX-Online-Voting-System",
