@@ -86,7 +86,7 @@ export const navItems = [
       title: "Maze Solver - Interactive Pathfinding Visualizer",
       des: "An interactive online maze generator and solver able to use several different algorithms.",
       img: "/nextgen.png",
-      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg"],
+      iconLists: ["/js.png","/css.jpeg","/html.png"],
       link: "https://mazesolve.vercel.app/",
     },
 
