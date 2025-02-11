@@ -93,7 +93,7 @@ export const navItems = [
     {
       id: 6,
       title: "ENotes",
-      des: "Developed ENotes, a platform for secure and effortless sharing of academic resources with seamless navigation and a responsive user interface.",
+      des: "A secure, responsive platform for effortless academic resource sharing.",
       img: "/enotes.png",
       iconLists: ["/php.jfif","/mysql.jfif","/html.png", "/css.jpeg"],
       link: "https://github.com/TuShArBhArDwA/ENotes",
@@ -101,7 +101,7 @@ export const navItems = [
     {
       id: 5,
       title: "Raj Fashion",
-      des: "Built an interactive eCommerce platform using React, featuring a user-friendly interface, advanced product filtering, and a responsive design for an exceptional shopping experience.",
+      des: "ECommerce platform with a user-friendly interface, advanced filtering, and responsive design.",
       img: "/rajfash.jpg",
       iconLists: ["/react.jfif","/html.png", "/css.jpeg"],
       link: "https://raj-fashion.vercel.app/",
