@@ -118,7 +118,7 @@ export const navItems = [
     {
       id: 4,
       title: "Loan Calculator",
-      des: "A web app with an intuitive UI and visual graphs.",
+      des: "A web app for interest calculation with an intuitive UI and visual graphs.",
       img: "/loan.jpg",
       iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
