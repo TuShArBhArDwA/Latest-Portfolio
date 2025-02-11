@@ -84,7 +84,7 @@ export const navItems = [
     {
       id: 8,
       title: "Maze Solver",
-      des: "An interactive online maze generator and solver able to use several different algorithms.",
+      des: "An interactive maze generator and solver with multiple algorithms.",
       img: "/path.png",
       iconLists: ["/js.png","/css.jpeg","/html.png"],
       link: "https://mazesolve.vercel.app/",
@@ -101,7 +101,7 @@ export const navItems = [
     {
       id: 5,
       title: "Raj Fashion",
-      des: "ECommerce platform with a user-friendly interface, advanced filtering, and responsive design.",
+      des: "ECommerce platform with advanced filtering and a responsive, user-friendly design.",
       img: "/rajfash.jpg",
       iconLists: ["/react.jfif","/html.png", "/css.jpeg"],
       link: "https://raj-fashion.vercel.app/",
@@ -118,7 +118,7 @@ export const navItems = [
     {
       id: 4,
       title: "Loan Calculator",
-      des: "Built a web app for simple interest loan calculations with an intuitive UI and visual graphs.",
+      des: "A web app with an intuitive UI and visual graphs.",
       img: "/loan.jpg",
       iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
