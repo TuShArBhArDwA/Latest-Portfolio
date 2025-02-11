@@ -110,7 +110,7 @@ export const navItems = [
     {
       id: 2,
       title: "TeleScript Caller",
-      des: "Streamline your communication with this Python script that automates phone calls by making API requests to a server with custom scripts.",
+      des: "Automate calls with this Python script using API requests and custom scripts.",
       img: "/p2.png",
       iconLists: ["python.jpeg"],
       link: "https://github.com/TuShArBhArDwA/TeleScript-Caller",
@@ -118,7 +118,7 @@ export const navItems = [
     {
       id: 4,
       title: "Loan Calculator",
-      des: "Developed a web application in Angular for calculating loan payments with simple interest, featuring an intuitive interface and visual graphs for clear, interactive results.",
+      des: "Built a web app for simple interest loan calculations with an intuitive UI and visual graphs.",
       img: "/loan.jpg",
       iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
@@ -126,7 +126,7 @@ export const navItems = [
     {
       id: 7,
       title: "N-Queens Visualizer",
-      des: "Unleash the power of strategy with this mesmerizing 3D visualization of the N-Queens problem, brought to life using Javascript",
+      des: "Experience a stunning 3D visualization of the N-Queens problem.",
       img: "/nqueen.jpg",
       iconLists: ["/html.png", "/css.jpeg", "/js.png" ],
       link: "https://n-queenvisualizer.vercel.app/",
@@ -134,7 +134,7 @@ export const navItems = [
     {
       id: 3,
       title: "eVoteX Voting System",
-      des: "Elevate your voting process with eVoteX—a secure and user-friendly terminal-based voting system in C, featuring encryption, authentication, and real-time vote counting for a reliable and engaging experience.",
+      des: "A secure and user-friendly terminal-based system featuring encryption, authentication, and real-time counting.",
       img: "/onlinevote.jpg",
       iconLists: ["/c.svg"],
       link: "https://github.com/TuShArBhArDwA/eVoteX-Online-Voting-System",
