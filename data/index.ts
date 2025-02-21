@@ -76,7 +76,7 @@ export const navItems = [
       title: "Hire Me",
       des: "A full-stack job portal for job search, applications, and recruiter postings.",
       img: "/hire.png",
-      iconLists: ["/react.jfif","/ts.svg", "/css.jpeg"],
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://hireeme.vercel.app/",
     },    
 
@@ -85,7 +85,7 @@ export const navItems = [
       title: "NextGen",
       des: "A sleek, responsive website for selling AI software seamlessly.",
       img: "/nextgen.png",
-      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg"],
+      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg","/vercel.svg"],
       link: "https://nextgen-tau.vercel.app/",
     },
     
@@ -94,7 +94,7 @@ export const navItems = [
       title: "Maze Solver",
       des: "An interactive maze generator and solver with multiple algorithms.",
       img: "/path.png",
-      iconLists: ["/js.png","/css.jpeg","/html.png"],
+      iconLists: ["/js.png","/css.jpeg","/html.png","/vercel.svg"],
       link: "https://mazesolve.vercel.app/",
     },
 
@@ -111,7 +111,7 @@ export const navItems = [
       title: "Raj Fashion",
       des: "ECommerce platform with a responsive, user-friendly design.",
       img: "/rajfash.jpg",
-      iconLists: ["/react.jfif","/html.png", "/css.jpeg"],
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://raj-fashion.vercel.app/",
     },
     
@@ -136,7 +136,7 @@ export const navItems = [
       title: "N-Queens Visualizer",
       des: "Experience a stunning 3D visualization of the N-Queens problem.",
       img: "/nqueen.jpg",
-      iconLists: ["/html.png", "/css.jpeg", "/js.png" ],
+      iconLists: ["/html.png", "/css.jpeg", "/js.png","/vercel.svg" ],
       link: "https://n-queenvisualizer.vercel.app/",
     },
     {
