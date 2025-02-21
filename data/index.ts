@@ -71,9 +71,17 @@ export const navItems = [
   ];
   
   export const projects = [
-    
     {
       id: 1,
+      title: "Hire Me",
+      des: "A full-stack job portal for job search, applications, and recruiter postings.",
+      img: "/hire.png",
+      iconLists: ["/react.jfif","/ts.svg", "/css.jpeg"],
+      link: "https://hireeme.vercel.app/",
+    },    
+
+    {
+      id: 2,
       title: "NextGen",
       des: "A sleek, responsive website for selling AI software seamlessly.",
       img: "/nextgen.png",
@@ -82,7 +90,7 @@ export const navItems = [
     },
     
     {
-      id: 8,
+      id: 9,
       title: "Maze Solver",
       des: "An interactive maze generator and solver with multiple algorithms.",
       img: "/path.png",
@@ -91,7 +99,7 @@ export const navItems = [
     },
 
     {
-      id: 6,
+      id: 7,
       title: "ENotes",
       des: "A secure, responsive platform for effortless academic resource sharing.",
       img: "/enotes.png",
@@ -99,7 +107,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/ENotes",
     },
     {
-      id: 5,
+      id: 6,
       title: "Raj Fashion",
       des: "ECommerce platform with a responsive, user-friendly design.",
       img: "/rajfash.jpg",
@@ -108,7 +116,7 @@ export const navItems = [
     },
     
     {
-      id: 2,
+      id: 3,
       title: "TeleScript Caller",
       des: "Automate calls with this Python script using API requests and custom scripts.",
       img: "/p2.png",
@@ -116,7 +124,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/TeleScript-Caller",
     },
     {
-      id: 4,
+      id: 5,
       title: "Loan Calculator",
       des: "A web app for interest calculation with an intuitive UI and visual graphs.",
       img: "/loan.jpg",
@@ -124,7 +132,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
     },
     {
-      id: 7,
+      id: 8,
       title: "N-Queens Visualizer",
       des: "Experience a stunning 3D visualization of the N-Queens problem.",
       img: "/nqueen.jpg",
@@ -132,7 +140,7 @@ export const navItems = [
       link: "https://n-queenvisualizer.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "eVoteX Voting System",
       des: "A secure, user-friendly terminal system with encryption and real-time counting.",
       img: "/onlinevote.jpg",
