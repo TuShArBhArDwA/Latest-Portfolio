@@ -71,12 +71,20 @@ export const navItems = [
   ];
   
   export const projects = [
+     {
+      id: 10,
+      title: "Chat Sphere",
+      des: "A real-time chat application enabling seamless messaging, group chats, and media sharing with secure authentication.",
+      img: "/hehe.png",
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://chat-sphereee.vercel.app/",
+    },    
     {
       id: 1,
       title: "Hire Me",
       des: "A full-stack job portal for job search, applications, and recruiter postings.",
       img: "/hire.png",
-      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://hireeme.vercel.app/",
     },    
 
