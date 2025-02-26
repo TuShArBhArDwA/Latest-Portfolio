@@ -74,7 +74,7 @@ export const navItems = [
      {
       id: 10,
       title: "Chat Sphere",
-      des: "A real-time chat application enabling seamless messaging, group chats, and media sharing with secure authentication.",
+      des: "A real-time chat app with secure authentication, group chats, and media sharing.",
       img: "/hehe.png",
       iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://chat-sphereee.vercel.app/",
