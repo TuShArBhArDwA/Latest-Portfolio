@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+    {
+      id: 11,
+      title: "Mini Anon AI",
+      des: "A real-time AI assistant with chat history, and API integrations.",
+      img: "/help.png",
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://mini-anon-ai.vercel.app/",
+    }, 
      {
       id: 10,
       title: "Chat Sphere",
