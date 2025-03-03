@@ -71,22 +71,7 @@ export const navItems = [
   ];
   
   export const projects = [
-    {
-      id: 11,
-      title: "Mini Anon AI",
-      des: "A real-time AI assistant with chat history, and API integrations.",
-      img: "/help.png",
-      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
-      link: "https://mini-anon-ai.vercel.app/",
-    }, 
-     {
-      id: 10,
-      title: "Chat Sphere",
-      des: "A real-time chat app with secure authentication, group chats, and media sharing.",
-      img: "/hehe.png",
-      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
-      link: "https://chat-sphereee.vercel.app/",
-    },    
+       
     {
       id: 1,
       title: "Hire Me",
@@ -94,7 +79,32 @@ export const navItems = [
       img: "/hire.png",
       iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://hireeme.vercel.app/",
-    },    
+    },
+    {
+      id: 11,
+      title: "Mini Anon AI",
+      des: "A real-time AI assistant with chat history, and API integrations.",
+      img: "/help.png",
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://mini-anon-ai.vercel.app/",
+    },     
+    {
+      id: 12,
+      title: "LinkHub",
+      des: "List all your links on one website.",
+      img: "/linkhub.jpg",
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://link-hub-cyan.vercel.app/",
+    }, 
+    
+     {
+      id: 10,
+      title: "Chat Sphere",
+      des: "A real-time chat app with secure authentication, group chats, and media sharing.",
+      img: "/hehe.png",
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://chat-sphereee.vercel.app/",
+    }, 
 
     {
       id: 2,
