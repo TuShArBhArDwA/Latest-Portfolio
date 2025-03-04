@@ -114,7 +114,14 @@ export const navItems = [
       iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg","/vercel.svg"],
       link: "https://nextgen-tau.vercel.app/",
     },
-    
+    {
+      id: 13,
+      title: "EazyEatz",
+      des: "An easy-to-use Online food ordering website and placing orders.",
+      img: "/food.jpg",
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://eazy-eatz-pink.vercel.app/",
+    }, 
     {
       id: 9,
       title: "Maze Solver",
