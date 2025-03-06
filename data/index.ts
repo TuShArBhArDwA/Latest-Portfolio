@@ -80,6 +80,23 @@ export const navItems = [
       iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://hireeme.vercel.app/",
     },
+  {
+      id: 10,
+      title: "Snappy",
+      des: "A real-time chat application with secure authentication and end-to-end encryption.",
+      img: "/snapy.png",
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://snapppy.vercel.app/",
+    }, 
+
+    {
+      id: 9,
+      title: "Maze Solver",
+      des: "An interactive maze generator and solver with multiple algorithms.",
+      img: "/path.png",
+      iconLists: ["/js.png","/css.jpeg","/html.png","/vercel.svg"],
+      link: "https://mazesolve.vercel.app/",
+    },
     {
       id: 11,
       title: "Mini Anon AI",
@@ -95,15 +112,6 @@ export const navItems = [
       img: "/linkhub.jpg",
       iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://link-hub-cyan.vercel.app/",
-    }, 
-    
-     {
-      id: 10,
-      title: "Chat Sphere",
-      des: "A real-time chat app with secure authentication, group chats, and media sharing.",
-      img: "/hehe.png",
-      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
-      link: "https://chat-sphereee.vercel.app/",
     }, 
 
     {
@@ -122,14 +130,6 @@ export const navItems = [
       iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
       link: "https://eazy-eatz-pink.vercel.app/",
     }, 
-    {
-      id: 9,
-      title: "Maze Solver",
-      des: "An interactive maze generator and solver with multiple algorithms.",
-      img: "/path.png",
-      iconLists: ["/js.png","/css.jpeg","/html.png","/vercel.svg"],
-      link: "https://mazesolve.vercel.app/",
-    },
 
     {
       id: 7,
