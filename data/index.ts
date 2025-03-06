@@ -77,7 +77,7 @@ export const navItems = [
       title: "Hire Me",
       des: "A full-stack job portal for job search, applications, and recruiter postings.",
       img: "/hire.png",
-      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif","/cloudName.svg","/js.png", "/tail.svg","/html.png","/vercel.svg"],
       link: "https://hireeme.vercel.app/",
     },
   {
