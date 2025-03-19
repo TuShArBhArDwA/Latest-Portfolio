@@ -7,7 +7,7 @@ const codingProfiles = [
     name: "LeetCode",
     url: "https://leetcode.com/u/Tusharr2004/",
     logo: "/leetcode-logo.svg",
-    description: "Solved over 880 questions with a streak of 505 days.",
+    description: "Solved over 880 questions with a streak of 500 days.",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const CodingProfiles = () => {
               background: "rgb(4,7,29)",
               backgroundColor:
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              borderRadius: calc(1.75rem * 0.96),
+              borderRadius: `calc(1.75rem * 0.96)`,
             }}
             className="relative text-black dark:text-white border-neutral-200 dark:border-slate-800 flex flex-col items-center p-6 transition-transform transform hover:scale-105 shadow-lg rounded-xl overflow-hidden"
           >
@@ -62,7 +62,7 @@ const CodingProfiles = () => {
             >
               <img
                 src={profile.logo}
-                alt={${profile.name} logo}
+                alt={`${profile.name} logo`}
                 className="w-20 h-20 mb-4"
               />
               <h2 className="text-2xl font-semibold mb-2">{profile.name}</h2>
