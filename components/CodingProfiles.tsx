@@ -7,14 +7,14 @@ const codingProfiles = [
     name: "LeetCode",
     url: "https://leetcode.com/u/Tusharr2004/",
     logo: "/leetcode-logo.svg",
-    description: "Solved over 880 questions with a streak of 500 days.",
+    description: "Solved over 900 questions with a streak of 530 days.",
   },
   {
     id: 2,
     name: "GeeksforGeeks",
     url: "https://www.geeksforgeeks.org/user/tusharbhard2004/",
     logo: "/gfg-logo.svg",
-    description: "Institute Rank 75, solved 540 questions with a streak of 325 days.",
+    description: "Institute Rank 63, solved 560 questions with a streak of 360 days.",
   },
   {
     id: 3,
@@ -22,14 +22,14 @@ const codingProfiles = [
     url: "https://www.codechef.com/users/tushar2004b",
     logo: "/codelogo.svg",
     // logo: "/codechef.jfif",
-    description: "Division 3 with a streak of 705 days.",
+    description: "Division 3 with a streak of 730 days.",
   },
   {
     id: 4,
     name: "Coding Ninjas",
     url: "https://www.naukri.com/code360/profile/Bhar_dwajTushar",
     logo: "/cnlogo.svg",
-    description: "335-day streak, solved over 720 MCQs and 70 coding problems.",
+    description: "365-day streak, solved over 720 MCQs and 75 coding problems.",
   },
 ];
 
