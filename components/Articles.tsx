@@ -7,7 +7,7 @@ const RecentArticles = () => {
   return (
     <div className="py-20" id="articles">
       <h1 className="heading">
-      A glimpse into my <span className="text-purple">articles & experiences</span>
+      A glimpse into my <span className="text-purple">articles</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {articles.map((item) => (
