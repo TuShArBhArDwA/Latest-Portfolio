@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
+        <link rel="icon" href="/favicon.jpeg" type="image/jpeg" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
