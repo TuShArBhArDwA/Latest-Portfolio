@@ -182,6 +182,38 @@ export const navItems = [
     },
   ];
   
+
+  export const articles = [
+    {
+      id: 1,
+      img: "/oneshotarticle.png",
+      title: "One-Shot Interview Prep Guide",
+      des:
+        "A quick and focused revision guide covering DSA, System Design, DBMS, OS, CN & more for last-minute interview prep.",
+      link: "https://www.linkedin.com/pulse/your-one-stop-revision-resource-cracking-software-roles-bhardwaj-zqbgc/",
+      iconLists: ["/linkedin.jpeg"],
+    },
+    {
+      id: 2,
+      img: "/microarticle.png",
+      title: "How I Cracked the Microsoft Internship",
+      des:
+        "Step-by-step breakdown of my Microsoft interview process, preparation strategy, and key takeaways.",
+      link: "https://leetcode.com/discuss/post/5857898/microsoft-swe-intern-hyderabad-bengaluru-dofg/",
+      iconLists: ["/leetcode-logo.svg"],
+    },
+    {
+      id: 3,
+      img: "/dsaarticle.png",
+      title: "Top DSA Sheets to Follow",
+      des:
+        "A curated list of the most effective DSA question sheets for cracking MAANG/FAANG and top tech interviews — handpicked with explanations.",
+      link: "https://www.linkedin.com/pulse/top-dsa-sheets-follow-tushar-bhardwaj--vigec/",
+      iconLists: ["/linkedin.jpeg","/leetcode-logo.svg"],
+    }
+    
+  ];
+
   export const testimonials = [
     {
       quote:
