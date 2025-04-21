@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+{
+      id: 14,
+      title: "3D T-Bot",
+      des: "A sleek, 3D Linktree page featuring T-Bot — your interactive digital guide.",
+      img: "/tbot.png",
+      iconLists: ["/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://t-bot-blush.vercel.app/",
+    }, 
        
     {
       id: 1,
