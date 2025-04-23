@@ -130,14 +130,7 @@ export const navItems = [
       iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg","/vercel.svg"],
       link: "https://nextgen-tau.vercel.app/",
     },
-    {
-      id: 13,
-      title: "EazyEatz",
-      des: "An easy-to-use Online food ordering website and placing orders.",
-      img: "/food.jpg",
-      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
-      link: "https://eazy-eatz-pink.vercel.app/",
-    }, 
+    
 
     {
       id: 7,
@@ -172,6 +165,22 @@ export const navItems = [
       iconLists: ["/html.png", "/css.jpeg", "/ts.svg"],
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
     },
+    {
+      id: 15,
+      title: "EduHub",
+      des: "A simple platform for students and teachers to manage courses and profiles.",
+      img: "/eduhub.png",
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://edu-hub-tb.vercel.app/",
+    }, 
+    {
+      id: 13,
+      title: "EazyEatz",
+      des: "An easy-to-use Online food ordering website and placing orders.",
+      img: "/food.jpg",
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      link: "https://eazy-eatz-pink.vercel.app/",
+    }, 
     {
       id: 8,
       title: "N-Queens Visualizer",
