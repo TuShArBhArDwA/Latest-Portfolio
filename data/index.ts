@@ -338,7 +338,7 @@ export const navItems = [
     {
       id: 2,
       img: "/twit.svg",
-      link: "https://twitter.com/TusharBhard2004",
+      link: "https://twitter.com/miniiianon",
     },
     {
       id: 3,
