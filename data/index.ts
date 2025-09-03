@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+ {
+      id: 16,
+      title: "Resumind",
+      des: "AI Resume Analyzer with smart job matching, built using React & Puter.js.",
+      img: "/resumind.png",
+      iconLists: ["/react.jfif", "/ts.svg","/vercel.svg"],
+      link: "https://resumemind.vercel.app/",
+      },
 {
       id: 14,
       title: "3D T-Bot",
