@@ -72,6 +72,14 @@ export const navItems = [
   
   export const projects = [
  {
+      id: 17,
+      title: "RecallAI",
+      des: "AI chat agent with memory, enabling context-aware and personalized conversations.",
+      img: "/recallai.png",
+      iconLists: ["/react.jfif", "/python.jpeg","/vercel.svg"],
+      link: "https://recall-ai-two.vercel.app/",
+      },
+ {
       id: 16,
       title: "Resumind",
       des: "AI Resume Analyzer with smart job matching, built using React & Puter.js.",
