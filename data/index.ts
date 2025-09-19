@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+      {
+      id: 18,
+      title: "EduGameHub",
+      des: "AI chat agent with memory, enabling context-aware and personalized conversations.",
+      img: "/edugame.png",
+      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      link: "https://edugamiz.vercel.app",
+      },
  {
       id: 17,
       title: "RecallAI",
