@@ -74,7 +74,7 @@ export const navItems = [
       {
       id: 18,
       title: "EduGameHub",
-      des: "AI chat agent with memory, enabling context-aware and personalized conversations.",
+      des: "Gamified STEM learning platform for rural students, multilingual and offline.",
       img: "/edugame.png",
       iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
       link: "https://edugamiz.vercel.app",
