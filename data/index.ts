@@ -327,7 +327,7 @@ export const navItems = [
       title: "Software Engineer Intern - Microsoft",
       desc: "Worked on horizontal scaling of Kubernetes controllers to improve reliability and performance.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/ms.jpeg",
+      thumbnail: "/ms.jpg",
     },
 {
       id: 2,
