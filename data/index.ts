@@ -322,6 +322,27 @@ export const navItems = [
   ];
   
   export const workExperience = [
+{
+      id: 2,
+      title: "Software Engineer Intern - Microsoft",
+      desc: "Worked on horizontal scaling of Kubernetes controllers to improve reliability and performance.",
+      className: "md:col-span-2", // change to md:col-span-2
+      thumbnail: "/ms.jpeg",
+    },
+{
+      id: 2,
+      title: "Content Problem Reviewer and Solution Author - Leetcode",
+      desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
+      className: "md:col-span-2", // change to md:col-span-2
+      thumbnail: "/leetcode-logo.svg",
+    },
+{
+      id: 3,
+      title: "Operations Interns",
+      desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
+      className: "md:col-span-2", // change to md:col-span-2
+      thumbnail: "/cs.jpeg",
+    },
     {
       id: 1,
       title: "Website Developer",
@@ -329,27 +350,15 @@ export const navItems = [
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
-    {
-      id: 3,
-      title: "Operations Interns",
-      desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
-      className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp3.svg",
-    },
-    {
-      id: 2,
-      title: "Content Problem Reviewer and Solution Author - Leetcode",
-      desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
-      className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp2.svg",
-    },
+    
+    
     
     {
       id: 2,
       title: "Technical Head - Apna College LPU",
       desc: "Directing the technical team in developing and implementing innovative solutions for the Apna College LPU club.",
       className: "md:col-span-2",
-      thumbnail: "/exp1.svg",
+      thumbnail: "/apnaclg.jpeg",
     },
   ];
   
