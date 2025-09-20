@@ -334,7 +334,7 @@ export const navItems = [
       title: "Content Problem Reviewer and Solution Author - Leetcode",
       desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/leetcode-logo.svg",
+      thumbnail: "/lc.jpg",
     },
 {
       id: 3,
