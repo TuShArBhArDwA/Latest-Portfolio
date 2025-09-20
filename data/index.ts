@@ -338,7 +338,7 @@ export const navItems = [
     },
 {
       id: 3,
-      title: "Operations Interns",
+      title: "Program Management Intern - CipherSchools",
       desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/cs.jpeg",
