@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+       {
+      id: 19,
+      title: "PulseAI",
+      des: "AI-powered interview platform with real-time voice assistant.",
+      img: "/pulse.png",
+      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      link: "ai-interview-platform-pink.vercel.app",
+      },
       {
       id: 18,
       title: "EduGameHub",
