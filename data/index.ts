@@ -72,6 +72,14 @@ export const navItems = [
   
   export const projects = [
        {
+      id: 20,
+      title: "Stock Explore",
+      des: "App showing live global market indexes, gainers/losers, spotlight stock, and news.",
+      img: "/stock.png",
+      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      link: "https://stock-explore.vercel.app/",
+      },
+       {
       id: 19,
       title: "PulseAI",
       des: "AI-powered interview platform with real-time voice assistant.",
