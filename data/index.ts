@@ -72,6 +72,14 @@ export const navItems = [
   
   export const projects = [
        {
+      id: 21,
+      title: "Canvas Editor",
+      des: "A minimalist 2D canvas for your ideas, built and saved instantly to the cloud.",
+      img: "/canvas.png",
+      iconLists: ["/react.jfif","/firebase.jpg","/js.png","/vercel.svg"],
+      link: "https://simple-canvas-editor.vercel.app/",
+      },
+       {
       id: 20,
       title: "Stock Explore",
       des: "App showing live global market indexes, gainers/losers, spotlight stock, and news.",
