@@ -76,7 +76,7 @@ export const navItems = [
       title: "Canvas Editor",
       des: "A minimalist 2D canvas for your ideas, built and saved instantly to the cloud.",
       img: "/canvas.png",
-      iconLists: ["/react.jfif","/firebase.jpg","/js.png","/vercel.svg"],
+      iconLists: ["/react.jfif","/firebase.jpg","/js.png","/vercel.png"],
       link: "https://simple-canvas-editor.vercel.app/",
       },
        {
@@ -84,7 +84,7 @@ export const navItems = [
       title: "Stock Explore",
       des: "App showing live global market indexes, gainers/losers, spotlight stock, and news.",
       img: "/stock.png",
-      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      iconLists: ["/react.jfif","/ts.svg","/vercel.png"],
       link: "https://stock-explore.vercel.app/",
       },
        {
@@ -92,7 +92,7 @@ export const navItems = [
       title: "PulseAI",
       des: "AI-powered interview platform with real-time voice assistant.",
       img: "/pulse.png",
-      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      iconLists: ["/react.jfif","/ts.svg","/vercel.png"],
       link: "https://ai-interview-platform-pink.vercel.app",
       },
       {
@@ -100,7 +100,7 @@ export const navItems = [
       title: "EduGameHub",
       des: "Gamified STEM learning platform for rural students, multilingual and offline.",
       img: "/edugame.png",
-      iconLists: ["/react.jfif","/ts.svg","/vercel.svg"],
+      iconLists: ["/react.jfif","/ts.svg","/vercel.png"],
       link: "https://edugamiz.vercel.app",
       },
  {
@@ -108,7 +108,7 @@ export const navItems = [
       title: "RecallAI",
       des: "AI chat agent with memory, enabling context-aware and personalized conversations.",
       img: "/recallai.png",
-      iconLists: ["/react.jfif", "/python.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif", "/python.jpeg","/vercel.png"],
       link: "https://recall-ai-two.vercel.app/",
       },
  {
@@ -116,7 +116,7 @@ export const navItems = [
       title: "Resumind",
       des: "AI Resume Analyzer with smart job matching, built using React & Puter.js.",
       img: "/resumind.png",
-      iconLists: ["/react.jfif", "/ts.svg","/vercel.svg"],
+      iconLists: ["/react.jfif", "/ts.svg","/vercel.png"],
       link: "https://resumemind.vercel.app/",
       },
 {
@@ -124,7 +124,7 @@ export const navItems = [
       title: "3D T-Bot",
       des: "A sleek, 3D Linktree page featuring T-Bot — your interactive digital guide.",
       img: "/tbot.png",
-      iconLists: ["/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/html.png", "/css.jpeg","/vercel.png"],
       link: "https://t-bot-blush.vercel.app/",
     }, 
        
@@ -133,7 +133,7 @@ export const navItems = [
       title: "Hire Me",
       des: "A full-stack job portal for job search, applications, and recruiter postings.",
       img: "/hire.png",
-      iconLists: ["/react.jfif","/cloudName.svg","/js.png", "/tail.svg","/html.png","/vercel.svg"],
+      iconLists: ["/react.jfif","/cloudName.svg","/js.png", "/tail.svg","/html.png","/vercel.png"],
       link: "https://hireeme.vercel.app/",
     },
   {
@@ -141,7 +141,7 @@ export const navItems = [
       title: "Snappy",
       des: "A real-time chat application with secure authentication and end-to-end encryption.",
       img: "/snapy.png",
-      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://snapppy.vercel.app/",
     }, 
 
@@ -150,7 +150,7 @@ export const navItems = [
       title: "Maze Solver",
       des: "An interactive maze generator and solver with multiple algorithms.",
       img: "/path.png",
-      iconLists: ["/js.png","/css.jpeg","/html.png","/vercel.svg"],
+      iconLists: ["/js.png","/css.jpeg","/html.png","/vercel.png"],
       link: "https://mazesolve.vercel.app/",
     },
     {
@@ -158,7 +158,7 @@ export const navItems = [
       title: "Mini Anon AI",
       des: "A real-time AI assistant with chat history, and API integrations.",
       img: "/help.png",
-      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif","/js.png","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://mini-anon-ai.vercel.app/",
     },     
     {
@@ -166,7 +166,7 @@ export const navItems = [
       title: "LinkHub",
       des: "List all your links on one website.",
       img: "/linkhub.jpg",
-      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://link-hub-cyan.vercel.app/",
     }, 
 
@@ -175,7 +175,7 @@ export const navItems = [
       title: "NextGen",
       des: "A sleek, responsive website for selling AI software seamlessly.",
       img: "/nextgen.png",
-      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/next.jfif","/react.jfif","/ts.svg", "/css.jpeg","/vercel.png"],
       link: "https://nextgen-tau.vercel.app/",
     },
     
@@ -193,7 +193,7 @@ export const navItems = [
       title: "Raj Fashion",
       des: "ECommerce platform with a responsive, user-friendly design.",
       img: "/rajfash.jpg",
-      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/react.jfif","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://raj-fashion.vercel.app/",
     },
     
@@ -218,7 +218,7 @@ export const navItems = [
       title: "EduHub",
       des: "A simple platform for students and teachers to manage courses and profiles.",
       img: "/eduhub.png",
-      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://edu-hub-tb.vercel.app/",
     }, 
     {
@@ -226,7 +226,7 @@ export const navItems = [
       title: "EazyEatz",
       des: "An easy-to-use Online food ordering website and placing orders.",
       img: "/food.jpg",
-      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.svg"],
+      iconLists: ["/js.png","/html.png", "/css.jpeg","/vercel.png"],
       link: "https://eazy-eatz-pink.vercel.app/",
     }, 
     {
@@ -234,7 +234,7 @@ export const navItems = [
       title: "N-Queens Visualizer",
       des: "Experience a stunning 3D visualization of the N-Queens problem.",
       img: "/nqueen.jpg",
-      iconLists: ["/html.png", "/css.jpeg", "/js.png","/vercel.svg" ],
+      iconLists: ["/html.png", "/css.jpeg", "/js.png","/vercel.png" ],
       link: "https://n-queenvisualizer.vercel.app/",
     },
     {
