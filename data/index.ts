@@ -73,7 +73,7 @@ export const navItems = [
   export const projects = [
       {
       id: 22,
-      title: "Canvas Editor",
+      title: "Anon BEATS",
       des: "Ad‑free music player — upload your songs, build playlists, and stream beautifully.",
       img: "/beats.jpg",
       iconLists: ["/next.jfif","/ts.svg","/vercel.png"],
