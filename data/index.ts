@@ -71,6 +71,14 @@ export const navItems = [
   ];
   
   export const projects = [
+      {
+      id: 22,
+      title: "Canvas Editor",
+      des: "Ad‑free music player — upload your songs, build playlists, and stream beautifully.",
+      img: "/beats.jpg",
+      iconLists: ["/next.jfif","/ts.svg","/vercel.png"],
+      link: "https://anon-beats.vercel.app/",
+      },
        {
       id: 21,
       title: "Canvas Editor",
