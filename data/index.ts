@@ -50,7 +50,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently building  a competitive programming platform",
+      title: "Currently building a SaaS Product",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
