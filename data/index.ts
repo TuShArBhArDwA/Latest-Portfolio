@@ -72,7 +72,15 @@ export const navItems = [
   
   export const projects = [
       {
-      id: 22,
+      id: 1,
+      title: "Branch Customer Service",
+      des: "Real-time support inbox — manage conversations, prioritize urgency, and respond instantly.",
+      img: "/customer service.jpg",
+      iconLists: ["/next.jfif","/ts.svg","/vercel.png"],
+      link: "https://v0-customer-service-messaging-app.vercel.app/",
+      },
+      {
+      id: 2,
       title: "Anon BEATS",
       des: "Ad‑free music player — upload your songs, build playlists, and stream beautifully.",
       img: "/beats.jpg",
@@ -80,7 +88,7 @@ export const navItems = [
       link: "https://anon-beats.vercel.app/",
       },
        {
-      id: 21,
+      id: 3,
       title: "Canvas Editor",
       des: "A minimalist 2D canvas for your ideas, built and saved instantly to the cloud.",
       img: "/canvas.png",
@@ -88,7 +96,7 @@ export const navItems = [
       link: "https://simple-canvas-editor.vercel.app/",
       },
        {
-      id: 20,
+      id: 4,
       title: "Stock Explore",
       des: "App showing live global market indexes, gainers/losers, spotlight stock, and news.",
       img: "/stock.png",
@@ -96,7 +104,7 @@ export const navItems = [
       link: "https://stock-explore.vercel.app/",
       },
        {
-      id: 19,
+      id: 5,
       title: "PulseAI",
       des: "AI-powered interview platform with real-time voice assistant.",
       img: "/pulse.png",
@@ -104,7 +112,7 @@ export const navItems = [
       link: "https://ai-interview-platform-pink.vercel.app",
       },
       {
-      id: 18,
+      id: 6,
       title: "EduGameHub",
       des: "Gamified STEM learning platform for rural students, multilingual and offline.",
       img: "/edugame.png",
@@ -112,7 +120,7 @@ export const navItems = [
       link: "https://edugamiz.vercel.app",
       },
  {
-      id: 17,
+      id: 7,
       title: "RecallAI",
       des: "AI chat agent with memory, enabling context-aware and personalized conversations.",
       img: "/recallai.png",
@@ -120,7 +128,7 @@ export const navItems = [
       link: "https://recall-ai-two.vercel.app/",
       },
  {
-      id: 16,
+      id: 8,
       title: "Resumind",
       des: "AI Resume Analyzer with smart job matching, built using React & Puter.js.",
       img: "/resumind.png",
@@ -128,7 +136,7 @@ export const navItems = [
       link: "https://resumemind.vercel.app/",
       },
 {
-      id: 14,
+      id: 9,
       title: "3D T-Bot",
       des: "A sleek, 3D Linktree page featuring T-Bot — your interactive digital guide.",
       img: "/tbot.png",
@@ -137,7 +145,7 @@ export const navItems = [
     }, 
        
     {
-      id: 1,
+      id: 10,
       title: "Hire Me",
       des: "A full-stack job portal for job search, applications, and recruiter postings.",
       img: "/hire.png",
@@ -145,7 +153,7 @@ export const navItems = [
       link: "https://hireeme.vercel.app/",
     },
   {
-      id: 10,
+      id: 11,
       title: "Snappy",
       des: "A real-time chat application with secure authentication and end-to-end encryption.",
       img: "/snapy.png",
@@ -154,7 +162,7 @@ export const navItems = [
     }, 
 
     {
-      id: 9,
+      id: 12,
       title: "Maze Solver",
       des: "An interactive maze generator and solver with multiple algorithms.",
       img: "/path.png",
@@ -162,7 +170,7 @@ export const navItems = [
       link: "https://mazesolve.vercel.app/",
     },
     {
-      id: 11,
+      id: 13,
       title: "Mini Anon AI",
       des: "A real-time AI assistant with chat history, and API integrations.",
       img: "/help.png",
@@ -170,7 +178,7 @@ export const navItems = [
       link: "https://mini-anon-ai.vercel.app/",
     },     
     {
-      id: 12,
+      id: 14,
       title: "LinkHub",
       des: "List all your links on one website.",
       img: "/linkhub.jpg",
@@ -179,7 +187,7 @@ export const navItems = [
     }, 
 
     {
-      id: 2,
+      id: 15,
       title: "NextGen",
       des: "A sleek, responsive website for selling AI software seamlessly.",
       img: "/nextgen.png",
@@ -189,7 +197,7 @@ export const navItems = [
     
 
     {
-      id: 7,
+      id: 16,
       title: "ENotes",
       des: "A secure, responsive platform for effortless academic resource sharing.",
       img: "/enotes.png",
@@ -197,7 +205,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/ENotes",
     },
     {
-      id: 6,
+      id: 17,
       title: "Raj Fashion",
       des: "ECommerce platform with a responsive, user-friendly design.",
       img: "/rajfash.jpg",
@@ -206,7 +214,7 @@ export const navItems = [
     },
     
     {
-      id: 3,
+      id: 18,
       title: "TeleScript Caller",
       des: "Automate calls with this Python script using API requests and custom scripts.",
       img: "/p2.png",
@@ -214,7 +222,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/TeleScript-Caller",
     },
     {
-      id: 5,
+      id: 19,
       title: "Loan Calculator",
       des: "A web app for interest calculation with an intuitive UI and visual graphs.",
       img: "/loan.jpg",
@@ -222,7 +230,7 @@ export const navItems = [
       link: "https://github.com/TuShArBhArDwA/Loan-Calculator-Web-Application",
     },
     {
-      id: 15,
+      id: 20,
       title: "EduHub",
       des: "A simple platform for students and teachers to manage courses and profiles.",
       img: "/eduhub.png",
@@ -230,7 +238,7 @@ export const navItems = [
       link: "https://edu-hub-tb.vercel.app/",
     }, 
     {
-      id: 13,
+      id: 21,
       title: "EazyEatz",
       des: "An easy-to-use Online food ordering website and placing orders.",
       img: "/food.jpg",
@@ -238,7 +246,7 @@ export const navItems = [
       link: "https://eazy-eatz-pink.vercel.app/",
     }, 
     {
-      id: 8,
+      id: 22,
       title: "N-Queens Visualizer",
       des: "Experience a stunning 3D visualization of the N-Queens problem.",
       img: "/nqueen.jpg",
@@ -246,7 +254,7 @@ export const navItems = [
       link: "https://n-queenvisualizer.vercel.app/",
     },
     {
-      id: 4,
+      id: 23,
       title: "eVoteX Voting System",
       des: "A secure, user-friendly terminal system with encryption and real-time counting.",
       img: "/onlinevote.jpg",
