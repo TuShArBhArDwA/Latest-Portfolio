@@ -19,6 +19,7 @@ Welcome to my personal portfolio website repository!
 - [Contributing](#contributing)
 - [Links](#links)
 - [License](#license)
+- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
