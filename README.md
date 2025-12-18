@@ -84,13 +84,18 @@ Open your browser and go to http://localhost:3000 to view the project.
 ### Contributing
 Feel free to fork this repository and submit pull requests if you have suggestions or improvements. For bug reports or feature requests, please open an issue.
 
-### Links
-- **Old Portfolio:** [PortFolio](https://tusharbhardwaj.vercel.app/)
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/bhardwajtushar2004/)
-- **Connect 1:1** [Topmate](https://topmate.io/tusharbhardwaj)
 
-### License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+- **Meet T-Bot** - [Discover My Work](https://t-bot-blush.vercel.app/)
+- **Tushar Bhardwaj** - [Portfolio](https://tushar-bhardwaj.vercel.app/)
+- **Connect 1:1** - [Topmate](https://topmate.io/tusharbhardwaj)
+- **GitHub:** [TuShArBhArDwA](https://github.com/TuShArBhArDwA)
+- **LinkedIn:** [Tushar Bhardwaj](https://www.linkedin.com/in/bhardwajtushar2004/)
+- **Email:** [tusharbhardwaj2617@example.com](mailto:tusharbhardwaj2617@example.com)
 
 ### Acknowledgements
 Thank you to all the open-source projects and tools that made this portfolio possible. Special thanks to the developers of Next.js, Three.js, Framer Motion, and Tailwind CSS.
