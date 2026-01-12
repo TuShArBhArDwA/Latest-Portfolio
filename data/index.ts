@@ -410,8 +410,8 @@ export const navItems = [
     },
     {
       id: 2,
-      img: "/twit.svg",
-      link: "https://twitter.com/miniiianon",
+      img: "/x-logo.avif",
+      link: "https://x.com/Tusharab2004",
     },
     {
       id: 3,
