@@ -90,13 +90,10 @@ Open your browser and go to http://localhost:3000 to view the project.
 Feel free to fork this repository and submit pull requests if you have suggestions or improvements. For bug reports or feature requests, please open an issue.
 
 
----
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
 ## Connect with me
 
