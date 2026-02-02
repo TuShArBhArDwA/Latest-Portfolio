@@ -17,9 +17,8 @@ Welcome to my personal portfolio website repository!
   - [Installation](#installation)
   - [Running the Project](#running-the-project)
 - [Contributing](#contributing)
-- [Links](#links)
 - [License](#license)
-- [Contact](#contact)
+- [Connect With me](#connect-with-me)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
@@ -45,7 +44,12 @@ This project showcases my skills, projects, and experience through an interactiv
 
 ## Live Demo
 
-You can view the live version of my portfolio website at:  [Visit my Portfolio 🌐↗](https://tushar-bhardwaj.vercel.app/)
+You can view the live version of my portfolio website at:  
+[Visit my Portfolio 🌐↗](https://tushar-bhardwaj.vercel.app/)
+
+**Portfolio & Code Walkthrough (Loom):**  
+[Watch the Full Walkthrough ↗](https://www.loom.com/share/382db90115bd48a9ac9c4c2e4d5bf5ff)
+
 
 ## Quick Start
 
@@ -86,17 +90,19 @@ Open your browser and go to http://localhost:3000 to view the project.
 Feel free to fork this repository and submit pull requests if you have suggestions or improvements. For bug reports or feature requests, please open an issue.
 
 
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-- **Meet T-Bot** - [Discover My Work](https://t-bot-blush.vercel.app/)
-- **Tushar Bhardwaj** - [Portfolio](https://tushar-bhardwaj.vercel.app/)
-- **Connect 1:1** - [Topmate](https://topmate.io/tusharbhardwaj)
-- **GitHub:** [TuShArBhArDwA](https://github.com/TuShArBhArDwA)
-- **LinkedIn:** [Tushar Bhardwaj](https://www.linkedin.com/in/bhardwajtushar2004/)
-- **Email:** [tusharbhardwaj2617@example.com](mailto:tusharbhardwaj2617@example.com)
+---
+
+## Connect with me
+
+If you’d like to connect, feel free to reach out — [Click here](https://minianonlink.vercel.app/tusharbhardwaj)
+
+---
 
 ### Acknowledgements
 Thank you to all the open-source projects and tools that made this portfolio possible. Special thanks to the developers of Next.js, Three.js, Framer Motion, and Tailwind CSS.
