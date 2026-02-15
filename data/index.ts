@@ -72,6 +72,14 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 9,
+    title: "Weaave",
+    des: "Build, connect, and deploy AI workflows visually.",
+    img: "/weaave.jpg",
+    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    link: "https://weaave.vercel.app/",
+  },
+  {
     id: 1,
     title: "MiniLink",
     des: "Create your link-in-bio page in seconds. Free forever.",
@@ -329,6 +337,16 @@ export const socialMedia = [
     img: "/link.svg",
     link: "https://www.linkedin.com/in/bhardwajtushar2004/",
   },
+  {
+    id: 4,
+    img: "/youtube.svg",
+    link: "https://www.youtube.com/channel/UCqq8kNn9yKvsl95MeiFPIeg",
+  },
+  {
+    id: 5,
+    img: "/medium.svg",
+    link: "https://medium.com/@bhardwajtushar2004",
+  },
 ];
 
 export const codingProfiles = [
@@ -366,7 +384,7 @@ export const codingProfiles = [
 export const interviewPlaybooks = [
   {
     id: 1,
-    title: "🧠 System Design",
+    title: "System Design",
     description: "Designing systems at scale and preparing for system design interviews.",
     img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3lzdGVtJTIwZGVzaWdufGVufDB8fDB8fHww",
     content: "Master the art of designing scalable, reliable, and maintainable systems. Covers concepts like Load Balancing, Caching, Database Sharding, CAP Theorem, and High-Level Design (HLD) interviews.",
@@ -374,7 +392,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 2,
-    title: "⚙️ Operating Systems (1Shot-OS)",
+    title: "Operating Systems (1Shot-OS)",
     description: "OS fundamentals distilled for quick revision.",
     img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlcmF0aW5nJTIwc3lzdGVtfGVufDB8fDB8fHww",
     content: "A concise guide to Operating Systems. Key topics include Process Management, Memory Management, Concurrency, Deadlocks, and File Systems. Perfect for last-minute revisions.",
@@ -382,7 +400,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 3,
-    title: "🗄️ Database Systems (1Shot-DBMS)",
+    title: "Database Systems (1Shot-DBMS)",
     description: "DBMS concepts for interview preparation.",
     img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YWJhc2V8ZW58MHx8MHx8fDA%3D",
     content: "Everything you need to know about DBMS: ACID properties, Normalization, Indexing, Transactions, and SQL vs NoSQL. Essential for backend roles.",
@@ -390,23 +408,23 @@ export const interviewPlaybooks = [
   },
   {
     id: 4,
-    title: "🌐 Computer Networks (1Shot-CN)",
+    title: "Computer Networks (1Shot-CN)",
     description: "Networking essentials in a one-shot format.",
-    img: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNlcnZlcnxlbnwwfHwwfHx8MA%3D%3D",
+    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
     content: "Deep dive into Computer Networks. Covers the OSI Model, TCP/IP, HTTP/HTTPS, DNS, and network security protocols. Simplified for interview success.",
     link: "#",
   },
   {
     id: 5,
-    title: "🧮 SQL (1Shot-SQL)",
+    title: "SQL (1Shot-SQL)",
     description: "SQL concepts and patterns for interviews.",
-    img: "https://images.unsplash.com/photo-1667372393119-c81c0cda0518?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhdGFiYXNlfGVufDB8fDB8fHww",
+    img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop",
     content: "Master SQL queries, joins, subqueries, and window functions. Includes common interview problems and optimization techniques.",
     link: "#",
   },
   {
     id: 6,
-    title: "🧩 Object-Oriented Programming (1Shot-OOPS)",
+    title: "Object-Oriented Programming (1Shot-OOPS)",
     description: "OOPS revision with C++ examples.",
     img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfHx8MA%3D%3D",
     content: "Understand the four pillars of OOP: Encapsulation, Abstraction, Inheritance, and Polymorphism. Explained with real-world examples and C++ code snippets.",
@@ -414,7 +432,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 7,
-    title: "💬 Most Common HR Interview Questions",
+    title: "Most Common HR Interview Questions",
     description: "Behavioral questions and structured answers.",
     img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJ2aWV3fGVufDB8fDB8fHww",
     content: "Prepare for the behavioral round with confidence. Learn how to answer 'Tell me about yourself', 'Strength and Weakness', and STAR method questions.",
@@ -422,7 +440,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 8,
-    title: "🧑💼 Resources for Senior Software Engineers",
+    title: "Resources for Senior Software Engineers",
     description: "Expectations, preparation, and growth.",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D",
     content: "A curated list of resources for Senior roles. Focuses on leadership, architecture, mentorship, and navigating complex engineering challenges.",
@@ -430,7 +448,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 9,
-    title: "🏢 LeetCode Questions (Company-wise)",
+    title: "LeetCode Questions (Company-wise)",
     description: "Curated problems by company.",
     img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8fHww",
     content: "Target specific companies with curated LeetCode problem lists. Includes Top 50 questions for Amazon, Google, Microsoft, and more.",
@@ -438,7 +456,7 @@ export const interviewPlaybooks = [
   },
   {
     id: 10,
-    title: "🧰 GitHub Basics",
+    title: "GitHub Basics",
     description: "Practical Git & GitHub essentials.",
     img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2l0aHVifGVufDB8fDB8fHww",
     content: "Master version control with Git and GitHub. Covers branching, merging, pull requests, resolving conflicts, and CI/CD basics.",

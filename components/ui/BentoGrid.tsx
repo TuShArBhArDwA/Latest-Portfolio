@@ -137,16 +137,10 @@ export const BentoGridItem = ({
           {id === 5 && (
             <div className="relative w-full h-full flex items-center justify-center">
               <TextRevealCard
-                text={title as string}
-                revealText={description as string}
+                text={description as string}
+                revealText={title as string}
                 className="w-full h-full bg-transparent border-none"
               >
-                <TextRevealCardTitle>
-                  {title}
-                </TextRevealCardTitle>
-                <TextRevealCardDescription>
-                  {description}
-                </TextRevealCardDescription>
               </TextRevealCard>
             </div>
           )}

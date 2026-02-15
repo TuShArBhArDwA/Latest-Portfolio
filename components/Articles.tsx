@@ -44,28 +44,28 @@ const RecentArticles = () => {
               containerRef={containerRef}
               className={cn("absolute cursor-grab active:cursor-grabbing w-80 z-20", articlePositions[index])}
             >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div className="relative w-full h-40 overflow-hidden rounded-xl mb-4">
+              <div className="relative w-full h-40 overflow-hidden rounded-xl mb-4 group-hover/card:shadow-xl transition-shadow duration-300">
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                   <img
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover pointer-events-none"
                   />
-                </div>
+                </a>
+              </div>
 
-                <h3 className="mt-2 text-center text-lg font-bold text-neutral-700 dark:text-white line-clamp-2 leading-tight">
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
+                <h3 className="mt-2 text-center text-lg font-bold text-neutral-700 dark:text-white line-clamp-2 leading-tight hover:text-purple transition-colors duration-200">
                   {item.title}
                 </h3>
-                <p className="text-xs text-neutral-500 dark:text-neutral-300 text-center mt-2 line-clamp-3">
-                  {item.des}
-                </p>
+              </a>
 
-                <div className="flex justify-center items-center mt-3 text-purple text-xs font-bold">
+              <p className="text-xs text-neutral-500 dark:text-neutral-300 text-center mt-2 line-clamp-3 select-none">
+                {item.des}
+              </p>
+
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block mt-3">
+                <div className="flex justify-center items-center text-purple text-xs font-bold hover:underline">
                   Read Article <FaLocationArrow className="ml-1 w-3 h-3" />
                 </div>
               </a>

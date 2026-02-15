@@ -126,13 +126,13 @@ const InterviewPlaybooks = () => {
                     </div>
                 ) : null}
             </AnimatePresence>
-            <ul className="max-w-2xl mx-auto w-full gap-4 relative z-50">
+            <ul className="max-w-2xl mx-auto w-full gap-4 relative z-50 flex flex-col">
                 {interviewPlaybooks.map((card, index) => (
                     <motion.div
                         layoutId={`card-${card.id}-${id}`}
                         key={`card-${card.id}-${id}`}
                         onClick={() => setActive(card)}
-                        className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer group"
+                        className="p-4 flex flex-col md:flex-row justify-between items-center bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-2xl cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors group"
                     >
                         <div className="flex gap-4 flex-col md:flex-row items-center">
                             <motion.div layoutId={`image-${card.id}-${id}`}>
