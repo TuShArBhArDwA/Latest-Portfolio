@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
@@ -77,7 +78,14 @@ export const LinkPreview = ({
         <>
             {isMounted ? (
                 <div className="hidden">
-                    <img src={src} width={width} height={height} quality={quality} priority={true} alt="hidden image" />
+                    <Image
+                        src={src}
+                        width={width}
+                        height={height}
+                        quality={quality}
+                        priority={true}
+                        alt="hidden image"
+                    />
                 </div>
             ) : null}
 
@@ -115,10 +123,12 @@ export const LinkPreview = ({
                             target="_blank"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <img
+                            <Image
                                 src={src}
                                 width={width}
                                 height={height}
+                                quality={quality}
+                                priority={true}
                                 className="rounded-lg object-cover"
                                 alt="preview image"
                             />
