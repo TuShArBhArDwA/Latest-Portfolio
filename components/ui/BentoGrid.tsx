@@ -137,7 +137,7 @@ export const BentoGridItem = ({
           {id === 5 && (
             <div className="relative w-full h-full flex items-center justify-center">
               <TextRevealCard
-                text={description as string}
+                text={<>Currently building <span className="blur-[2px]">a SaaS Product</span></>}
                 revealText={title as string}
                 className="w-full h-full bg-transparent border-none"
               >
@@ -197,6 +197,6 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
-    </div>
+    </div >
   );
 };

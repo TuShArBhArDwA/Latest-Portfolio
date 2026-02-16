@@ -10,8 +10,8 @@ export const TextRevealCard = ({
     children,
     className,
 }: {
-    text: string;
-    revealText: string;
+    text: string | React.ReactNode;
+    revealText: string | React.ReactNode;
     children?: React.ReactNode;
     className?: string;
 }) => {
@@ -99,7 +99,7 @@ export const TextRevealCard = ({
                 ></motion.div>
 
                 <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-                    <p className="text-base sm:text-2xl md:text-4xl py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+                    <p className="text-base sm:text-2xl md:text-3xl py-5 font-bold bg-clip-text text-transparent bg-[#323238]">
                         {text}
                     </p>
                     <MemoizedStars />
