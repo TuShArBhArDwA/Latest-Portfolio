@@ -11,6 +11,7 @@ import { FaHome } from "react-icons/fa"
 import { navItems } from "@/data";
 import CodingProfiles from "@/components/CodingProfiles";
 import InterviewPlaybooks from "@/components/InterviewPlaybooks";
+import MemeCat from "@/components/MemeCat";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Approach />
         <Footer />
       </div>
+      <MemeCat />
     </main>
   );
 }

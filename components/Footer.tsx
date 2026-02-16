@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2026 <a href="https://www.linkedin.com/in/bhardwajtushar2004/" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition-colors">Tushar Bhardwaj</a>
+          Copyright © 2026 <a href="https://www.linkedin.com/in/bhardwajtushar2004/" target="_blank" rel="noopener noreferrer" className="text-purple font-semibold hover:text-purple/80 transition-colors">Tushar Bhardwaj</a>
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">

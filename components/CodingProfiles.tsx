@@ -81,7 +81,7 @@ const CodingProfiles = () => {
                   height={200}
                   src={active.logo}
                   alt={active.name}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-center p-10 bg-neutral-100 dark:bg-neutral-800"
+                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-center p-10 bg-neutral-100 dark:bg-neutral-800"
                 />
               </motion.div>
 
@@ -106,7 +106,7 @@ const CodingProfiles = () => {
                     layoutId={`button-${active.id}-${id}`}
                     href={active.url}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-[#CBACF9] text-white hover:bg-[#b58dfc] transition-colors"
                   >
                     View Profile
                   </motion.a>
@@ -127,13 +127,13 @@ const CodingProfiles = () => {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4 relative z-50">
+      <ul className="max-w-2xl mx-auto w-full gap-4 relative z-50 flex flex-col">
         {codingProfiles.map((card, index) => (
           <motion.div
             layoutId={`card-${card.id}-${id}`}
             key={`card-${card.id}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer group"
+            className="p-4 flex flex-col md:flex-row justify-between items-center bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-2xl cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors group"
           >
             <div className="flex gap-4 flex-col md:flex-row items-center">
               <motion.div layoutId={`image-${card.id}-${id}`}>

@@ -45,7 +45,7 @@ const RecentProjects = () => {
                     alt={item.title}
                   />
                 </CardItem>
-                <div className="flex justify-between items-center mt-20">
+                <div className="flex justify-between items-center mt-10 md:mt-20">
                   <CardItem
                     translateZ={20}
                     as="a"

@@ -463,3 +463,48 @@ export const interviewPlaybooks = [
     link: "#",
   },
 ];
+
+export const catPhrases = [
+  "Psst... I know a secret.",
+  "Do not click me... unless? 😼",
+  "It's lonely here in the code... 😿",
+  "Nobody pets the pixel cat...",
+  "Am I a good boy? 🥺",
+  "Tushar forgot to feed me...",
+  "I judge your browser history. 👀",
+  "Compiling... 99%... error.",
+  "I'm not bugged, I'm featured.",
+  "Can I haz internship? 🍔",
+  "Waiting for belly rubs...",
+  "Just a stray div in a big body.",
+  "404: Love not found 💔",
+  "I accept payment in treats.",
+];
+
+export const catQuestions = [
+  {
+    id: 1,
+    question: "Why is there a cat on this portfolio?",
+    answer: "I am the Chief Morale Officer (CMO). I ensure Tushar takes breaks and doesn't push broken code. Also, I look cute floating here.",
+  },
+  {
+    id: 2,
+    question: "Should you hire Tushar?",
+    answer: "Absolutely! He builds scalable apps, writes clean code, and solves complex problems. Plus, he needs money to buy me premium cat food.",
+  },
+  {
+    id: 3,
+    question: "What is his tech stack?",
+    answer: "He dominates the MERN stack (MongoDB, Express, React, Node). He also speaks TypeScript, Next.js, and Python. I just speak 'Meow'.",
+  },
+  {
+    id: 4,
+    question: "Is he available for freelance/jobs?",
+    answer: "Yes! He is always open to exciting opportunities. Unless I am sitting on his keyboard, then you might have to wait 5 minutes.",
+  },
+  {
+    id: 5,
+    question: "How do I contact him?",
+    answer: "Check the 'Contact' section below! Or serve a `POST` request to his email endpoint. He usually responds faster than I catch a laser pointer.",
+  },
+];
