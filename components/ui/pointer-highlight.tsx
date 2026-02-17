@@ -21,7 +21,7 @@ export const PointerHighlight = ({
         >
             <span
                 className={cn(
-                    "relative inline-block decoration-clone bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 dark:from-indigo-300 dark:to-purple-300",
+                    "relative z-10 inline-block decoration-clone bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 dark:from-indigo-300 dark:to-purple-300",
                     className
                 )}
             >
@@ -45,7 +45,7 @@ export const PointerHighlight = ({
                     display: "inline",
                 }}
                 className={cn(
-                    `absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
+                    `absolute inset-0 z-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
                     className
                 )}
             ></motion.span>

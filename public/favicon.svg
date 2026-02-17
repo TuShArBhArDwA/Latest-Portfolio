@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0118"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="100" y1="100" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="256" y1="0" x2="256" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Subtle glow -->
+  <circle cx="256" cy="200" r="200" fill="url(#glow)" opacity="0.4"/>
+  <!-- T letter -->
+  <path d="M100 140 L260 140 L260 180 L200 180 L200 380 L160 380 L160 180 L100 180 Z" fill="url(#accent)"/>
+  <!-- B letter -->
+  <path d="M270 140 L370 140 Q420 140 420 190 Q420 230 385 240 Q425 250 425 295 Q425 380 370 380 L270 380 L270 140 Z M310 180 L310 225 L360 225 Q380 225 380 200 Q380 180 360 180 Z M310 260 L310 340 L365 340 Q390 340 390 300 Q390 260 365 260 Z" fill="url(#accent)"/>
+  <!-- Bottom accent line -->
+  <rect x="100" y="400" width="312" height="4" rx="2" fill="url(#accent)" opacity="0.6"/>
+</svg>

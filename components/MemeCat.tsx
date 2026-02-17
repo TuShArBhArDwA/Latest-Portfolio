@@ -1,131 +1,248 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { catPhrases, catQuestions } from "@/data";
 import { IoMdClose } from "react-icons/io";
-import { FaCat } from "react-icons/fa";
+import Image from "next/image";
 
 const MemeCat = () => {
-    const [isFalling, setIsFalling] = useState(true);
-    const [position, setPosition] = useState({ x: 0, y: -100 }); // Initial position off-screen
+    const controls = useAnimation();
+
+    // Track exact position for pausing and resuming
+    const positionRef = useRef({ x: 0, y: -100 });
+    // Guard to prevent race conditions with hover
+    const isHoveredRef = useRef(false);
+    // Guard to prevent stale closure with modal
+    const modalOpenRef = useRef(false);
+
     const [content, setContent] = useState("");
     const [showBubble, setShowBubble] = useState(false);
     const [modalOpen, setModalOpen] = useState(false);
     const [activeQuestionId, setActiveQuestionId] = useState<number | null>(null);
 
-    // State to track direction and movement duration
-    const [direction, setDirection] = useState(1); // 1 for right, -1 for left
-    const [duration, setDuration] = useState(2);
+    // States: falling, walking, sitting, waiting
+    const [state, setState] = useState<'falling' | 'walking' | 'sitting' | 'waiting'>('falling');
+    const stateRef = useRef<'falling' | 'walking' | 'sitting' | 'waiting'>('falling');
 
-    // Screen dimensions for roaming boundaries
-    const [dimensions, setDimensions] = useState({ width: 1000, height: 800 });
+    const [direction, setDirection] = useState(1);
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
     const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 768);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
+    // Timers
+    const sitTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Helper to set state and ref in sync
+    const setStateSynced = useCallback((newState: 'falling' | 'walking' | 'sitting' | 'waiting') => {
+        stateRef.current = newState;
+        setState(newState);
     }, []);
 
+    // Clear all timeouts
+    const clearAllTimeouts = useCallback(() => {
+        if (sitTimeoutRef.current) {
+            clearTimeout(sitTimeoutRef.current);
+            sitTimeoutRef.current = null;
+        }
+    }, []);
+
+    // Initialize
     useEffect(() => {
-        // Update dimensions on mount and resize
         const updateDimensions = () => {
-            setDimensions({ width: window.innerWidth, height: window.innerHeight });
+            if (typeof window !== 'undefined') {
+                setDimensions({ width: window.innerWidth, height: window.innerHeight });
+                setIsMobile(window.innerWidth < 768);
+            }
         };
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
         return () => window.removeEventListener('resize', updateDimensions);
     }, []);
 
-    // Initial Falling Animation
-    useEffect(() => {
-        // Start falling from top center
-        setPosition({ x: dimensions.width / 2 - 50, y: -100 });
+    // Roaming Logic: Walk to a random point on the screen edge
+    const startRoaming = useCallback(async () => {
+        // Don't start if hovered or modal open (use ref for synchronous check)
+        if (isHoveredRef.current || modalOpenRef.current) return;
 
-        const timeout = setTimeout(() => {
-            setIsFalling(false);
-            // Land somewhere near bottom right initially
-            setPosition({ x: dimensions.width - 150, y: dimensions.height - 150 });
-        }, 100);
+        setStateSynced('walking');
 
-        return () => clearTimeout(timeout);
-    }, [dimensions.width, dimensions.height]);
+        const catSize = isMobile ? 80 : 112;
+        // Pick a random edge: 0=Top, 1=Right, 2=Bottom, 3=Left
+        const edge = Math.floor(Math.random() * 4);
 
-    // Better Roaming Logic with direction
-    useEffect(() => {
-        if (isFalling || modalOpen) return;
+        let newX: number, newY: number;
 
-        const moveCat = () => {
-            const padding = dimensions.width < 768 ? 40 : 100;
-            const newX = Math.random() * (dimensions.width - padding);
-            const newY = Math.random() * (dimensions.height - padding);
+        switch (edge) {
+            case 0: // Top edge
+                newX = Math.random() * (dimensions.width - catSize);
+                newY = 0;
+                break;
+            case 1: // Right edge
+                newX = dimensions.width - catSize;
+                newY = Math.random() * (dimensions.height - catSize);
+                break;
+            case 2: // Bottom edge
+                newX = Math.random() * (dimensions.width - catSize);
+                newY = dimensions.height - catSize;
+                break;
+            case 3: // Left edge
+                newX = 0;
+                newY = Math.random() * (dimensions.height - catSize);
+                break;
+            default:
+                newX = dimensions.width / 2;
+                newY = dimensions.height / 2;
+        }
 
-            // Determine direction based on current position (approximate)
-            setPosition((prev) => {
-                const dx = newX - prev.x;
-                setDirection(dx > 0 ? 1 : -1);
+        const currentX = positionRef.current.x;
+        const currentY = positionRef.current.y;
 
-                // Calculate duration based on distance (speed = distance / time)
-                // Minimal duration of 3s, max of 10s roughly
-                const distance = Math.sqrt(Math.pow(newX - prev.x, 2) + Math.pow(newY - prev.y, 2));
-                const speed = 70; // pixels per second (slower is more realistic)
-                const newDuration = Math.max(3, distance / speed);
-                setDuration(newDuration);
+        const dx = newX - currentX;
+        const dy = newY - currentY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const speed = 80;
+        const duration = Math.max(2, dist / speed);
 
-                return { x: newX, y: newY };
+        setDirection(dx > 0 ? 1 : -1);
+
+        try {
+            await controls.start({
+                x: newX,
+                y: newY,
+                transition: { duration: duration, ease: "linear" }
             });
+
+            // After animation completes, check if still not hovered
+            if (isHoveredRef.current) return;
+
+            // Reached edge -> Sit for exactly 2 seconds
+            setStateSynced('sitting');
+
+            sitTimeoutRef.current = setTimeout(() => {
+                if (!isHoveredRef.current) {
+                    startRoaming();
+                }
+            }, 2000);
+
+        } catch {
+            // Animation was stopped (hover or modal)
+        }
+    }, [controls, dimensions, isMobile, modalOpen, setStateSynced]);
+
+    // Initial Fall
+    useEffect(() => {
+        if (dimensions.width === 0) return;
+
+        const startFall = async () => {
+            // Start from center top
+            const startX = dimensions.width / 2 - 50;
+            positionRef.current = { x: startX, y: -100 };
+            controls.set({ x: startX, y: -100 });
+
+            // Fall to bottom-right area
+            const targetY = dimensions.height - 150;
+            const targetX = dimensions.width - 150;
+
+            await controls.start({
+                x: targetX,
+                y: targetY,
+                transition: { duration: 2, ease: "easeIn" }
+            });
+
+            positionRef.current = { x: targetX, y: targetY };
+            setStateSynced('sitting');
+
+            // Sit for 2 seconds then start roaming
+            sitTimeoutRef.current = setTimeout(() => {
+                startRoaming();
+            }, 2000);
         };
 
-        // Move immediately then interval
-        moveCat();
-        // Since duration is variable, we can't use a fixed interval easily without potential overlap
-        // But for simplicity, a long enough interval is fine.
-        const intervalId = setInterval(() => {
-            moveCat();
-        }, 12000); // Allow enough time for movement before next move
+        startFall();
 
-        return () => clearInterval(intervalId);
-    }, [isFalling, modalOpen, dimensions]);
+        return () => clearAllTimeouts();
+    }, [dimensions.width]);
+
+    // Handle hover start
+    const handleMouseEnter = useCallback(() => {
+        if (modalOpen || stateRef.current === 'falling') return;
+
+        isHoveredRef.current = true;
+
+        // Stop animation immediately
+        controls.stop();
+
+        // Clear any pending sit timeout
+        clearAllTimeouts();
+
+        // Switch to waiting state
+        setStateSynced('waiting');
+    }, [modalOpen, controls, clearAllTimeouts, setStateSynced]);
+
+    // Handle hover end
+    const handleMouseLeave = useCallback(() => {
+        if (modalOpen || stateRef.current === 'falling') return;
+
+        isHoveredRef.current = false;
+
+        // Resume roaming
+        startRoaming();
+    }, [modalOpen, startRoaming]);
+
+    // Handle click -> open modal
+    const handleCatClick = useCallback(() => {
+        modalOpenRef.current = true;
+        setModalOpen(true);
+        setShowBubble(false);
+        controls.stop();
+        clearAllTimeouts();
+    }, [controls, clearAllTimeouts]);
+
+    // Determine which image to show
+    const getCatImage = useCallback(() => {
+        switch (stateRef.current) {
+            case 'waiting':
+                return "/cat-wait.gif";
+            case 'sitting':
+                return "/cat-sit.gif";
+            case 'walking':
+            case 'falling':
+            default:
+                return "/cat-walk.gif";
+        }
+    }, [state]); // state dependency to trigger re-render
+
+    // Track position via onUpdate
+    const handleAnimationUpdate = useCallback((latest: { [key: string]: string | number }) => {
+        if (typeof latest.x === 'number') positionRef.current.x = latest.x;
+        if (typeof latest.y === 'number') positionRef.current.y = latest.y;
+    }, []);
 
     // Mumbling Logic
     useEffect(() => {
         if (modalOpen) return;
-
         const mumble = () => {
+            if (stateRef.current === 'falling' || stateRef.current === 'waiting') return;
+
             const phrase = catPhrases[Math.floor(Math.random() * catPhrases.length)];
             setContent(phrase);
             setShowBubble(true);
             setTimeout(() => setShowBubble(false), 3000);
         };
-
-        const interval = setInterval(mumble, 7000 + Math.random() * 5000); // Talk every 7-12 seconds
+        const interval = setInterval(mumble, 7000);
         return () => clearInterval(interval);
-    }, [modalOpen]);
-
-    const handleCatClick = () => {
-        setModalOpen(true);
-        setShowBubble(false);
-    };
+    }, [modalOpen, state]);
 
     return (
         <>
             <motion.div
                 className="fixed top-0 left-0 z-[9999] cursor-pointer pointer-events-auto"
-                initial={{ y: -200, x: 0, scaleX: 1 }}
-                animate={{
-                    x: position.x,
-                    y: position.y,
-                    rotate: isFalling ? 360 : 0,
-                }}
-                transition={{
-                    duration: isFalling ? 2 : duration,
-                    ease: "linear", // Smooth roaming movement
-                    rotate: { duration: 2 } // Rotate faster if falling
-                }}
+                animate={controls}
+                onUpdate={handleAnimationUpdate}
                 onClick={handleCatClick}
-                whileHover={{ scale: 1.1, rotate: 10 }} // Maintain direction on hover
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                whileHover={{ scale: 1.1 }}
             >
                 {/* Thought Bubble */}
                 <AnimatePresence>
@@ -134,26 +251,35 @@ const MemeCat = () => {
                             initial={{ opacity: 0, scale: 0.5, y: 10 }}
                             animate={{ opacity: 1, scale: 1, y: -10 }}
                             exit={{ opacity: 0, scale: 0.5 }}
-                            className="absolute -top-16 md:-top-20 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] md:text-sm p-2 md:p-3 rounded-2xl shadow-lg w-32 md:w-40 text-center pointer-events-none"
+                            className="absolute -top-16 md:-top-20 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] md:text-sm p-2 md:p-3 rounded-2xl shadow-lg w-32 md:w-40 text-center pointer-events-none z-50"
                         >
                             <div className="relative">
                                 {content}
-                                {/* Bubble Tail */}
                                 <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-white"></div>
                             </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
 
-                {/* Cat Image - Fallback to Icon */}
+                {/* Cat Image with Border */}
                 <div className="flex flex-col items-center justify-center">
                     <motion.div
                         animate={{ scaleX: direction }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.1 }}
+                        className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-purple/60 shadow-[0_0_15px_rgba(139,92,246,0.3)] bg-black-200/50 p-1"
                     >
-                        <FaCat size={isMobile ? 50 : 80} className="text-white drop-shadow-lg" />
+                        <Image
+                            src={getCatImage()}
+                            alt="Meme Cat"
+                            fill
+                            className="object-contain drop-shadow-lg rounded-full"
+                            unoptimized
+                        />
                     </motion.div>
-                    <p className="text-white text-[10px] md:text-xs font-bold bg-black/50 px-2 rounded mt-1">Meow!</p>
+                    {/* Name Tag */}
+                    <span className="mt-1 text-[8px] md:text-[10px] font-bold text-purple bg-black-200/80 px-2 py-0.5 rounded-full border border-purple/30 whitespace-nowrap tracking-wider">
+                        MINI ANON
+                    </span>
                 </div>
             </motion.div>
 
@@ -167,16 +293,29 @@ const MemeCat = () => {
                             exit={{ opacity: 0, scale: 0.8 }}
                             className="bg-[#1a1a2e] border border-purple/50 p-4 md:p-6 rounded-2xl max-w-md w-full shadow-2xl relative overflow-hidden"
                         >
-                            {/* Close Button */}
                             <button
-                                onClick={() => setModalOpen(false)}
-                                className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                                onClick={() => {
+                                    modalOpenRef.current = false;
+                                    setModalOpen(false);
+                                    isHoveredRef.current = false;
+                                    // Small delay to let React state sync, then resume
+                                    setTimeout(() => startRoaming(), 50);
+                                }}
+                                className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors z-50"
                             >
                                 <IoMdClose size={24} />
                             </button>
 
                             <div className="flex flex-col items-center mb-6">
-                                <FaCat size={80} className="text-purple mb-4" />
+                                <div className="relative w-32 h-32 mb-4 rounded-full border-2 border-purple/60 shadow-[0_0_20px_rgba(139,92,246,0.4)] bg-black-200/50 p-1">
+                                    <Image
+                                        src="/cat-intro.gif"
+                                        alt="Cat Intro"
+                                        fill
+                                        className="object-contain rounded-full"
+                                        unoptimized
+                                    />
+                                </div>
                                 <h2 className="text-xl font-bold text-white text-center">
                                     I am <span className="text-purple">Mini Anon</span>!
                                 </h2>

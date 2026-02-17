@@ -97,3 +97,31 @@
     perspective: 1000px;
   }
 }
+
+/* Hero shimmer gradient text */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #c084fc,
+    #818cf8,
+    #e0e7ff,
+    #818cf8,
+    #c084fc
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleX(0.95); }
+  50% { opacity: 0.7; transform: scaleX(1); }
+}

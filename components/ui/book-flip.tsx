@@ -61,6 +61,19 @@ export const BookFlip = ({ items }: BookFlipProps) => {
         }
     };
 
+    const handleJump = (index: number) => {
+        if (isAnimating || index === currentPage) return;
+        setDirection(index > currentPage ? 1 : -1);
+        setIsAnimating(true);
+        setCurrentPage(index);
+    };
+
+    const bookmarkColors = [
+        "bg-red-500", "bg-orange-500", "bg-amber-500", "bg-yellow-500", "bg-lime-500", "bg-green-500",
+        "bg-emerald-500", "bg-teal-500", "bg-cyan-500", "bg-sky-500", "bg-blue-500", "bg-indigo-500",
+        "bg-violet-500", "bg-purple-500", "bg-fuchsia-500", "bg-pink-500", "bg-rose-500"
+    ];
+
     const currentItem = items[currentPage];
 
     // Logic for Static Pages state management (same as before to prevent glitches)
@@ -103,7 +116,8 @@ export const BookFlip = ({ items }: BookFlipProps) => {
         <div className="flex flex-col items-center justify-center w-full py-10 perspective-[2000px] select-none">
 
             {/* 3D BOOK CONTAINER */}
-            <div className="relative w-[320px] h-[480px] md:w-[640px] md:h-[520px] isolate">
+            {/* 3D BOOK CONTAINER */}
+            <div className="relative w-[280px] h-[420px] sm:w-[320px] sm:h-[480px] md:w-[900px] md:h-[600px] isolate">
 
                 {/* --- Back Cover (The Physical Binding) --- */}
                 <div
@@ -117,6 +131,25 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                     <div className="absolute bottom-[-14px] left-[2%] w-[96%] h-[14px] bg-[#e3e3e3] rounded-b-sm shadow-inner opacity-90" />
                     {/* Fake page block visible from side */}
                     <div className="absolute right-[-14px] top-[2%] w-[14px] h-[96%] bg-[#e3e3e3] rounded-r-sm shadow-inner opacity-90" />
+                </div>
+
+                {/* --- BOOKMARKS --- */}
+                <div className="absolute right-[-24px] top-[30px] bottom-[30px] flex flex-col gap-1 z-[-20] items-end"
+                    style={{ transform: "rotateY(-20deg) translateZ(-10px)" }}>
+                    {items.map((item, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleJump(index)}
+                            className={cn(
+                                "h-[24px] rounded-r-md transition-all duration-200 shadow-sm border-t border-b border-r border-white/20 hover:brightness-110 flex items-center justify-center pl-1 font-bold text-[10px] text-white/90 font-mono",
+                                bookmarkColors[index % bookmarkColors.length],
+                                currentPage === index ? "w-[55px] translate-x-2" : "w-[40px] hover:w-[50px] opacity-90"
+                            )}
+                            title={`Jump to ${items[index].title}`}
+                        >
+                            {index + 1}
+                        </button>
+                    ))}
                 </div>
 
 
@@ -169,7 +202,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 rounded-r-md" />
 
                         {/* Content */}
-                        <div className="p-8 flex flex-col h-full relative z-10 overflow-hidden">
+                        <div className="p-4 md:p-8 flex flex-col h-full relative z-10 overflow-hidden">
                             {rightStackItem ? (
                                 <div className="flex flex-col h-full opacity-60 blur-[0.5px]"> {/* Slightly blurred to indicate depth */}
                                     <div className="w-full h-48 relative mb-6 rounded-sm overflow-hidden border-[4px] border-white shadow-sm">
@@ -218,7 +251,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                 }}
                             >
                                 {/* FRONT FACE (Current Page) */}
-                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-6 md:p-8 border-l border-neutral-100 rounded-r-sm overflow-hidden transform-style-3d">
+                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-4 md:p-8 border-l border-neutral-100 rounded-r-sm overflow-hidden transform-style-3d">
                                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 pointer-events-none" />
 
                                     {/* Dynamic Lighting Overlay */}
@@ -234,12 +267,12 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                             </div>
                                         </div>
 
-                                        <div className="w-full h-48 relative mb-6 rounded-sm overflow-hidden shadow-md border-[6px] border-white transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                        <div className="w-full h-32 md:h-48 relative mb-4 md:mb-6 rounded-sm overflow-hidden shadow-md border-[4px] md:border-[6px] border-white transform rotate-1 hover:rotate-0 transition-transform duration-300">
                                             <Image src={currentItem.img} alt={currentItem.title} fill className="object-cover" />
                                         </div>
 
-                                        <h2 className="text-2xl md:text-3xl font-bold font-serif text-neutral-800 mb-3 leading-tight">{currentItem.title}</h2>
-                                        <p className="text-sm md:text-base text-neutral-600 font-serif leading-relaxed line-clamp-4 md:line-clamp-none">
+                                        <h2 className="text-lg md:text-3xl font-bold font-serif text-neutral-800 mb-2 md:mb-3 leading-tight">{currentItem.title}</h2>
+                                        <p className="text-xs md:text-base text-neutral-600 font-serif leading-relaxed line-clamp-3 md:line-clamp-none">
                                             {currentItem.content || currentItem.description}
                                         </p>
 

@@ -3,7 +3,6 @@ export const navItems = [
   { name: "Work Experience", link: "#work" },
   { name: "Projects", link: "#projects" },
   { name: "Coding Profiles", link: "#code" },
-  { name: "Contact", link: "#contact" },
 ];
 
 export const gridItems = [
@@ -460,20 +459,26 @@ export const interviewPlaybooks = [
 ];
 
 export const catPhrases = [
-  "Psst... I know a secret.",
-  "Do not click me... unless? 😼",
-  "It's lonely here in the code... 😿",
-  "Nobody pets the pixel cat...",
-  "Am I a good boy? 🥺",
-  "Tushar forgot to feed me...",
-  "I judge your browser history. 👀",
-  "Compiling... 99%... error.",
-  "I'm not bugged, I'm featured.",
-  "Can I haz internship? 🍔",
-  "Waiting for belly rubs...",
-  "Just a stray div in a big body.",
-  "404: Love not found 💔",
-  "I accept payment in treats.",
+  "Hire Tushar. I need cat food. 🍗",
+  "This portfolio runs on catnip. ☕",
+  "I once deployed on a Friday... 😈",
+  "git commit -m 'feed the cat' 🐱",
+  "My code reviews? *hiss* or *purr*.",
+  "I mass-rejected 0 bugs today. 💅",
+  "Tushar's code? Chef's kiss. 🤌",
+  "I'm the real 10x developer here.",
+  "sudo apt-get install belly-rubs 🐾",
+  "Debugging... found a mouse. 🐭",
+  "I don't have bugs, I have features.",
+  "npm install treats --save 📦",
+  "Catch me if you can! 💨",
+  "Psst... wanna see clean code? 👀",
+  "I reviewed this portfolio. It's purr-fect.",
+  "Error 418: I'm a teapot. Just kidding, I'm a cat.",
+  "Tushar forgot to commit... again. 😤",
+  "docker run --name mini-anon cat:latest 🐳",
+  "I type 120WPM. All gibberish tho.",
+  "Stack Overflow? I AM the answer. 😼",
 ];
 
 export const catQuestions = [
