@@ -117,11 +117,11 @@ export const BookFlip = ({ items }: BookFlipProps) => {
 
             {/* 3D BOOK CONTAINER */}
             {/* 3D BOOK CONTAINER */}
-            <div className="relative w-[280px] h-[420px] sm:w-[320px] sm:h-[480px] md:w-[900px] md:h-[600px] isolate">
+            <div className="relative w-[85vw] h-[420px] sm:w-[320px] sm:h-[480px] md:w-[900px] md:h-[600px] isolate">
 
                 {/* --- Back Cover (The Physical Binding) --- */}
                 <div
-                    className="absolute top-0 bottom-0 left-[-10px] right-[-10px] bg-[#2e2e2e] rounded-lg shadow-2xl skew-x-1 origin-bottom -z-30"
+                    className="absolute top-0 bottom-0 left-[-10px] right-[-10px] bg-[#2e2e2e] rounded-lg shadow-2xl skew-x-1 origin-bottom -z-30 hidden md:block"
                     style={{
                         transform: "translateZ(-25px) rotateX(15deg)",
                         boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.7)"
@@ -134,7 +134,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                 </div>
 
                 {/* --- BOOKMARKS --- */}
-                <div className="absolute right-[-24px] top-[30px] bottom-[30px] flex flex-col gap-1 z-[-20] items-end"
+                <div className="absolute right-[-24px] top-[30px] bottom-[30px] flex-col gap-1 z-[-20] items-end hidden md:flex"
                     style={{ transform: "rotateY(-20deg) translateZ(-10px)" }}>
                     {items.map((item, index) => (
                         <button
@@ -157,7 +157,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                 <div className="relative w-full h-full flex bg-transparent preserve-3d">
 
                     {/* SPINE */}
-                    <div className="absolute left-[50%] top-0 bottom-0 w-[48px] -ml-[24px] z-50 h-full preserve-3d pointer-events-none">
+                    <div className="absolute left-[50%] top-0 bottom-0 w-[48px] -ml-[24px] z-50 h-full preserve-3d pointer-events-none hidden md:block">
                         {/* Spine Gradient - Simulating roundness */}
                         <div className="w-full h-full bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 rounded-sm shadow-inner" />
                         {/* Binding Details */}
@@ -167,7 +167,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                     </div>
 
                     {/* --- LEFT STACK (Static) --- */}
-                    <div className="relative flex-1 bg-[#fdfbf6] rounded-l-md border-r border-[#e0e0e0] z-0">
+                    <div className="relative flex-1 bg-[#fdfbf6] rounded-l-md border-r border-[#e0e0e0] z-0 hidden md:block">
                         <PageStack side="left" count={Math.min(currentPage, 5)} /> {/* Dynamic stack height */}
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 rounded-l-md" />
 
@@ -197,7 +197,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
 
 
                     {/* --- RIGHT STACK (Static) --- */}
-                    <div className="relative flex-1 bg-white rounded-r-md z-0">
+                    <div className="relative flex-1 bg-white rounded-r-md md:rounded-l-none rounded-l-md z-0">
                         <PageStack side="right" count={Math.min(items.length - currentPage - 1, 5)} /> {/* Dynamic stack height */}
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 rounded-r-md" />
 
@@ -244,14 +244,14 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                         >
                             {/* The Flipping Page Element */}
                             <motion.div
-                                className="w-[50%] h-full relative pointer-events-auto"
+                                className="w-full md:w-[50%] h-full relative pointer-events-auto"
                                 style={{
                                     transformOrigin: "left center",
                                     transformStyle: "preserve-3d",
                                 }}
                             >
                                 {/* FRONT FACE (Current Page) */}
-                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-4 md:p-8 border-l border-neutral-100 rounded-r-sm overflow-hidden transform-style-3d">
+                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-3 md:p-8 border-l border-neutral-100 rounded-r-sm md:rounded-l-none rounded-l-sm overflow-hidden transform-style-3d">
                                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 pointer-events-none" />
 
                                     {/* Dynamic Lighting Overlay */}
@@ -267,16 +267,16 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                             </div>
                                         </div>
 
-                                        <div className="w-full h-32 md:h-48 relative mb-4 md:mb-6 rounded-sm overflow-hidden shadow-md border-[4px] md:border-[6px] border-white transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                                        <div className="w-full h-24 md:h-48 relative mb-3 md:mb-6 rounded-sm overflow-hidden shadow-md border-[3px] md:border-[6px] border-white transform rotate-1 hover:rotate-0 transition-transform duration-300">
                                             <Image src={currentItem.img} alt={currentItem.title} fill className="object-cover" />
                                         </div>
 
-                                        <h2 className="text-lg md:text-3xl font-bold font-serif text-neutral-800 mb-2 md:mb-3 leading-tight">{currentItem.title}</h2>
-                                        <p className="text-xs md:text-base text-neutral-600 font-serif leading-relaxed line-clamp-3 md:line-clamp-none">
+                                        <h2 className="text-sm md:text-3xl font-bold font-serif text-neutral-800 mb-1 md:mb-3 leading-tight">{currentItem.title}</h2>
+                                        <p className="text-[11px] md:text-base text-neutral-600 font-serif leading-relaxed line-clamp-4 md:line-clamp-none">
                                             {currentItem.content || currentItem.description}
                                         </p>
 
-                                        <div className="mt-auto pt-6 flex justify-between items-center border-t border-neutral-100">
+                                        <div className="mt-auto pt-3 md:pt-6 flex justify-between items-center border-t border-neutral-100">
                                             <span className="font-mono text-xs text-neutral-400">Page {currentPage + 1}</span>
                                             <a
                                                 href={currentItem.link}
@@ -325,7 +325,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
             </div>
 
             {/* Modern Controls */}
-            <div className="flex items-center gap-8 mt-16 z-50">
+            <div className="flex items-center gap-6 md:gap-8 mt-8 md:mt-16 z-50">
                 <button
                     onClick={handlePrev}
                     disabled={currentPage === 0 || isAnimating}

@@ -78,7 +78,7 @@ const Card = ({
       onMouseLeave={() => setHovered(false)}
       onClick={() => setHovered(!hovered)}
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[20rem] lg:h-[35rem] rounded-3xl cursor-pointer"
+       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[14rem] md:h-[20rem] lg:h-[35rem] rounded-3xl cursor-pointer"
       style={{
         background: "rgb(4,7,29)",
         backgroundColor:
@@ -94,30 +94,31 @@ const Card = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
+            className="h-full w-full absolute inset-0 hidden md:block"
           >
             {children}
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="relative z-20 px-10">
+      <div className="relative z-20 px-4 md:px-10 flex flex-col items-center">
         <div
-          className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
+          className="text-center group-hover/canvas-card:-translate-y-4 
+        md:absolute md:top-[50%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] 
+        md:group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center mb-2 md:mb-0"
         >
           {icon}
         </div>
         <h2
-          className="dark:text-white text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
+          className="dark:text-white text-center text-lg md:text-3xl md:opacity-0 group-hover/canvas-card:opacity-100
+         relative z-10 text-black font-bold group-hover/canvas-card:text-white 
          group-hover/canvas-card:-translate-y-2 transition duration-200"
         >
           {title}
         </h2>
         <p
-          className="text-sm opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 mt-4 group-hover/canvas-card:text-white text-center
+          className="text-xs md:text-sm md:opacity-0 group-hover/canvas-card:opacity-100
+         relative z-10 mt-1 md:mt-4 group-hover/canvas-card:text-white text-center line-clamp-3 md:line-clamp-none
          group-hover/canvas-card:-translate-y-2 transition duration-200"
           style={{ color: "#E4ECFF" }}
         >
