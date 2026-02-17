@@ -72,78 +72,68 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 9,
+    id: 1,
     title: "Weaave",
-    des: "Build, connect, and deploy AI workflows visually.",
+    des: "Build, connect, and deploy AI workflows visually — once you see it, you won’t go back",
     img: "/weaave.jpg",
     iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://weaave.vercel.app/",
-  },
-  {
-    id: 1,
-    title: "MiniLink",
-    des: "Create your link-in-bio page in seconds. Free forever.",
-    img: "/minilink.png",
-    iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
-    link: "https://minianonlink.vercel.app/",
+    link: "https://github.com/TuShArBhArDwA/weaave",
   },
   {
     id: 2,
-    title: "Branch Customer Service",
-    des: "Real-time support inbox — manage conversations, prioritize urgency, and respond instantly.",
-    img: "/customer service.jpg",
-    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://v0-customer-service-messaging-app.vercel.app/",
+    title: "MiniLink",
+    des: "Open, full-stack link-in-bio platform focused on simplicity, customization, and analytics",
+    img: "/minilink.png",
+    iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
+    link: "https://github.com/TuShArBhArDwA/MiniLink",
   },
   {
     id: 3,
-    title: "Anon BEATS",
-    des: "Ad‑free music player — upload your songs, build playlists, and stream beautifully.",
-    img: "/beats.jpg",
-    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://anon-beats.vercel.app/",
+    title: "MiniRizz",
+    des: "Your AI Wingman for the digital age – never get left on read again",
+    img: "/minirizz.jpg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    link: "https://github.com/TuShArBhArDwA/minirizz",
   },
   {
     id: 4,
-    title: "Canvas Editor",
-    des: "A minimalist 2D canvas for your ideas, built and saved instantly to the cloud.",
-    img: "/canvas.png",
-    iconLists: ["/react.jfif", "/firebase.jpg", "/js.png", "/vercel.png"],
-    link: "https://simple-canvas-editor.vercel.app/",
+    title: "PulseAI Prep",
+    des: "AI-driven interview preparation with mock interviews and feedback",
+    img: "/pulse.png",
+    iconLists: ["/react.jfif", "/ts.svg", "/vercel.png"],
+    link: "https://github.com/TuShArBhArDwA/PulseAI",
   },
   {
     id: 5,
-    title: "PulseAI",
-    des: "AI-powered interview platform with real-time voice assistant.",
-    img: "/pulse.png",
-    iconLists: ["/react.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://ai-interview-platform-pink.vercel.app",
+    title: "HireMe",
+    des: "Full-stack job portal for job discovery, applications, and recruiter postings",
+    img: "/hire.png",
+    iconLists: ["/react.jfif", "/cloudName.svg", "/js.png", "/tail.svg", "/html.png", "/vercel.png"],
+    link: "https://github.com/TuShArBhArDwA/HireMe",
   },
   {
     id: 6,
-    title: "EduGameHub",
-    des: "Gamified STEM learning platform for rural students, multilingual and offline.",
-    img: "/edugame.png",
-    iconLists: ["/react.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://edugamiz.vercel.app",
+    title: "AnonBeats",
+    des: "Personal, ad-free music player for uploading tracks, building playlists, and streaming",
+    img: "/beats.jpg",
+    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    link: "https://github.com/TuShArBhArDwA/AnonBeats",
   },
-
   {
     id: 7,
-    title: "Hire Me",
-    des: "A full-stack job portal for job search, applications, and recruiter postings.",
-    img: "/hire.png",
-    iconLists: ["/react.jfif", "/cloudName.svg", "/js.png", "/tail.svg", "/html.png", "/vercel.png"],
-    link: "https://hireeme.vercel.app/",
+    title: "Canvas Editor",
+    des: "Minimal 2D canvas for ideas with instant cloud persistence",
+    img: "/canvas.png",
+    iconLists: ["/react.jfif", "/firebase.jpg", "/js.png", "/vercel.png"],
+    link: "https://github.com/TuShArBhArDwA/Canvas-Editor",
   },
-
   {
     id: 8,
     title: "Maze Solver",
-    des: "An interactive maze generator and solver with multiple algorithms.",
+    des: "An interactive maze generator and solver with multiple algorithms",
     img: "/path.png",
     iconLists: ["/js.png", "/css.jpeg", "/html.png", "/vercel.png"],
-    link: "https://mazesolve.vercel.app/",
+    link: "https://github.com/TuShArBhArDwA/MazeSolver",
   },
 ];
 
@@ -155,7 +145,7 @@ export const articles = [
     des: "A detailed breakdown of my preparation strategy, interview rounds, and tips for cracking the Microsoft internship process.",
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/microsoft-swe-intern-hyderabad-bengaluru-noida-sep-2024-offer-28f71a07adce",
   },
   {
     id: 2,
@@ -163,7 +153,7 @@ export const articles = [
     des: "The story behind building MiniLink using Next.js and Tailwind CSS to create a customizable and beautiful link-in-bio tool.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/i-was-tired-of-ugly-bio-links-so-i-built-my-own-b5499b60bd70",
   },
   {
     id: 3,
@@ -171,7 +161,7 @@ export const articles = [
     des: "Sharing my experience with Stripe's technical screening, the questions asked, and how I approached the problem-solving aspect.",
     img: "/p3.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/stripe-technical-team-screen-interview-experience-3a6a9f958075",
   },
   {
     id: 4,
@@ -179,7 +169,7 @@ export const articles = [
     des: "Insights into the CRED machine coding round, focusing on code quality, design patterns, and handling edge cases effectively.",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/cred-backend-intern-machine-coding-round-interview-experience-66a3e28abb90",
   },
   {
     id: 5,
@@ -187,7 +177,7 @@ export const articles = [
     des: "My journey through the Eightfold.ai hiring process for the Agentic AI role, covering the assessment and interview stages.",
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/inside-eightfold-ais-agentic-ai-internship-hiring-process-2026-f86dcb625aa8",
   },
   {
     id: 6,
@@ -195,7 +185,7 @@ export const articles = [
     des: "A comprehensive review of the Optum Data Engineering interview loop, including database concepts, SQL queries, and system design.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/optum-data-engineering-interview-experience-mumbai-818b53371fde",
   },
   {
     id: 7,
@@ -203,7 +193,7 @@ export const articles = [
     des: "Recounting my on-campus interview experience with Trilogy Innovations, highlighting the challenging technical questions and rapid problem solving.",
     img: "/p3.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://medium.com/@tusharbhardwaj",
+    link: "https://medium.com/@bhardwajtushar2004/trilogy-innovations-winter-internship-2026-on-campus-interview-experience-7f2e243ac1c6",
   },
 ];
 
@@ -275,49 +265,49 @@ export const companies = [
 
 export const workExperience = [
   {
-    id: 5,
-    title: "Software Engineer Intern - Microsoft",
-    desc: "Worked on horizontal scaling of Kubernetes controllers to improve reliability and performance.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/ms.jpg",
-    date: "June 2025 - Aug 2025",
-    link: "https://www.microsoft.com/"
+    id: 1,
+    title: "Industry Evangelist - Topmate",
+    desc: "Mentored students on resumes, interviews, and career planning through structured 1:1 sessions. Conducted sessions focused on confidence-building and problem-solving.",
+    className: "md:col-span-2",
+    thumbnail: "/topmate.jpeg",
+    date: "Sep 2024 - Present",
+    link: "https://topmate.io/tusharbhardwaj",
   },
   {
     id: 2,
-    title: "Content Problem Reviewer and Solution Author - Leetcode",
-    desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/lc.jpg",
-    date: "Oct 2023 - Jan 2024",
-    link: "https://leetcode.com/"
+    title: "Software Engineer Intern - Microsoft",
+    desc: "Worked on horizontal scaling of Kubernetes controllers to improve reliability and performance.",
+    className: "md:col-span-2",
+    thumbnail: "/ms.jpg",
+    date: "Jun 2025 - Aug 2025",
+    link: "https://www.microsoft.com/",
   },
   {
     id: 3,
-    title: "Program Management Intern - CipherSchools",
-    desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/cs.jpeg",
-    date: "Jan 2025 - Feb 2025",
-    link: "https://www.cipherschools.com/"
-  },
-  {
-    id: 1,
-    title: "Website Developer",
+    title: "Freelance Software Developer",
     desc: "Working on client projects, developing websites and bots that enhanced user experience and functionality by designing intuitive, user-friendly interfaces.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
-    date: "2022 - Present",
-    link: "https://github.com/TuShArBhArDwA"
+    date: "Jan 2024 - Apr 2025",
+    link: "https://github.com/TuShArBhArDwA",
   },
   {
-    id: 2,
-    title: "Technical Head - Apna College LPU",
-    desc: "Directing the technical team in developing and implementing innovative solutions for the Apna College LPU club.",
+    id: 4,
+    title: "Program Management Intern - CipherSchools",
+    desc: "Managing daily operations of cohort-based programs by optimizing processes, analyzing performance data, and collaborating with leadership to enhance program efficiency and participant support.",
     className: "md:col-span-2",
-    thumbnail: "/apnaclg.jpeg",
-    date: "Aug 2022 - Aug 2023",
-    link: "https://www.linkedin.com/company/apna-college-lpu/"
+    thumbnail: "/cs.jpeg",
+    date: "Jan 2025 - Feb 2025",
+    link: "https://www.cipherschools.com/",
+  },
+  {
+    id: 5,
+    title: "Content Problem Reviewer - Leetcode",
+    desc: "Oversaw a quality control initiative for LeetCode problems, revising 120 problem statements and examples.",
+    className: "md:col-span-2",
+    thumbnail: "/lc.jpg",
+    date: "Apr 2023 - Sep 2024",
+    link: "https://leetcode.com/",
   },
 ];
 
@@ -392,7 +382,7 @@ export const interviewPlaybooks = [
     description: "Designing systems at scale and preparing for system design interviews.",
     img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3lzdGVtJTIwZGVzaWdufGVufDB8fDB8fHww",
     content: "Master the art of designing scalable, reliable, and maintainable systems. Covers concepts like Load Balancing, Caching, Database Sharding, CAP Theorem, and High-Level Design (HLD) interviews.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/System-Design",
   },
   {
     id: 2,
@@ -400,7 +390,7 @@ export const interviewPlaybooks = [
     description: "OS fundamentals distilled for quick revision.",
     img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlcmF0aW5nJTIwc3lzdGVtfGVufDB8fDB8fHww",
     content: "A concise guide to Operating Systems. Key topics include Process Management, Memory Management, Concurrency, Deadlocks, and File Systems. Perfect for last-minute revisions.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/1Shot-OS",
   },
   {
     id: 3,
@@ -408,7 +398,7 @@ export const interviewPlaybooks = [
     description: "DBMS concepts for interview preparation.",
     img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YWJhc2V8ZW58MHx8MHx8fDA%3D",
     content: "Everything you need to know about DBMS: ACID properties, Normalization, Indexing, Transactions, and SQL vs NoSQL. Essential for backend roles.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/1Shot-DBMS",
   },
   {
     id: 4,
@@ -416,7 +406,7 @@ export const interviewPlaybooks = [
     description: "Networking essentials in a one-shot format.",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
     content: "Deep dive into Computer Networks. Covers the OSI Model, TCP/IP, HTTP/HTTPS, DNS, and network security protocols. Simplified for interview success.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/1Shot-CN",
   },
   {
     id: 5,
@@ -424,7 +414,7 @@ export const interviewPlaybooks = [
     description: "SQL concepts and patterns for interviews.",
     img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop",
     content: "Master SQL queries, joins, subqueries, and window functions. Includes common interview problems and optimization techniques.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/1Shot-SQL",
   },
   {
     id: 6,
@@ -432,7 +422,7 @@ export const interviewPlaybooks = [
     description: "OOPS revision with C++ examples.",
     img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfHx8MA%3D%3D",
     content: "Understand the four pillars of OOP: Encapsulation, Abstraction, Inheritance, and Polymorphism. Explained with real-world examples and C++ code snippets.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/1Shot-OOPS",
   },
   {
     id: 7,
@@ -440,7 +430,7 @@ export const interviewPlaybooks = [
     description: "Behavioral questions and structured answers.",
     img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJ2aWV3fGVufDB8fDB8fHww",
     content: "Prepare for the behavioral round with confidence. Learn how to answer 'Tell me about yourself', 'Strength and Weakness', and STAR method questions.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/Most-common-HR-interview-questions",
   },
   {
     id: 8,
@@ -448,7 +438,7 @@ export const interviewPlaybooks = [
     description: "Expectations, preparation, and growth.",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D",
     content: "A curated list of resources for Senior roles. Focuses on leadership, architecture, mentorship, and navigating complex engineering challenges.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/Resources-for-Senior-Software-Engineer",
   },
   {
     id: 9,
@@ -456,7 +446,7 @@ export const interviewPlaybooks = [
     description: "Curated problems by company.",
     img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1taW5nfGVufDB8fDB8fHww",
     content: "Target specific companies with curated LeetCode problem lists. Includes Top 50 questions for Amazon, Google, Microsoft, and more.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/LeetCode-Questions-CompanyWise",
   },
   {
     id: 10,
@@ -464,7 +454,15 @@ export const interviewPlaybooks = [
     description: "Practical Git & GitHub essentials.",
     img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2l0aHVifGVufDB8fDB8fHww",
     content: "Master version control with Git and GitHub. Covers branching, merging, pull requests, resolving conflicts, and CI/CD basics.",
-    link: "#",
+    link: "https://github.com/TuShArBhArDwA/github_basics",
+  },
+  {
+    id: 11,
+    title: "Support My Work",
+    description: "If these resources helped you, consider buying me a coffee! ☕",
+    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=2574&auto=format&fit=crop",
+    content: "Creating high-quality educational content takes time and effort. Your support helps me keep these resources free and up-to-date for the community. Thank you! ❤️",
+    link: "https://buymeacoffee.com/tusharbhardwaj",
   },
 ];
 

@@ -1,8 +1,34 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowRight, IconCoffee } from "@tabler/icons-react";
 import Image from "next/image";
+import { cn } from "@/utils/cn"; // Assuming you have a cn utility, if not I can inline or remove
+
+// --- HELPER COMPONENT: Page Stack (Simulates thickness) ---
+const PageStack = ({ side = "right", count = 3 }: { side: "left" | "right"; count?: number }) => {
+    return (
+        <div className="absolute top-0 bottom-0 w-full h-full -z-10">
+            {Array.from({ length: count }).map((_, i) => (
+                <div
+                    key={i}
+                    className={cn(
+                        "absolute top-[2px] bottom-[2px] w-full bg-neutral-100 border border-neutral-200 rounded-sm shadow-sm",
+                        side === "left"
+                            ? "right-0 origin-right"
+                            : "left-0 origin-left"
+                    )}
+                    style={{
+                        [side === "left" ? "left" : "right"]: `-${(i + 1) * 2}px`, // Stack outwards
+                        top: `${(i + 1) * 1}px`, // Slight vertical shift for depth
+                        zIndex: -1 - i,
+                        width: `calc(100% - ${(i + 1) * 2}px)`, // Taper slightly
+                    }}
+                />
+            ))}
+        </div>
+    );
+};
 
 interface BookFlipProps {
     items: {
@@ -37,34 +63,20 @@ export const BookFlip = ({ items }: BookFlipProps) => {
 
     const currentItem = items[currentPage];
 
-    // Logic for Static Pages:
-    // When animating NEXT (0 -> 1):
-    //   - Current: 1. Dir: 1. Anim: True.
-    //   - Left Stack: Should be 0 (Visual Continuity with previous state). 
-    //   - Right Stack: Should be 2 (Visual Continuity? No, new revealed page).
-
-    // When animating PREV (1 -> 0):
-    //   - Current: 0. Dir: -1. Anim: True.
-    //   - Left Stack: Should be -1 (Nothing).
-    //   - Right Stack: Should be 1 (Visual Continuity with previous state).
-
-    // AFTER Anim (Anim: False):
-    //   - Left Stack: Current - 1.
-    //   - Right Stack: Current + 1.
-
+    // Logic for Static Pages state management (same as before to prevent glitches)
     const leftStackItem = isAnimating && direction === 1
         ? (currentPage > 1 ? items[currentPage - 2] : null)
         : (currentPage > 0 ? items[currentPage - 1] : null);
 
     const rightStackItem = isAnimating && direction === -1
-        ? (currentPage < items.length - 2 ? items[currentPage + 2] : null) // Was at Current+1, showing new Current+2
+        ? (currentPage < items.length - 2 ? items[currentPage + 2] : null)
         : (currentPage < items.length - 1 ? items[currentPage + 1] : null);
 
     // Animation Variants
     const pageVariants = {
         enter: (direction: number) => ({
             rotateY: direction === 1 ? 0 : -180,
-            zIndex: direction === 1 ? 20 : 30, // Prev: Enter (flipping back) starts on top
+            zIndex: direction === 1 ? 20 : 30,
             opacity: 1,
         }),
         center: {
@@ -72,16 +84,16 @@ export const BookFlip = ({ items }: BookFlipProps) => {
             zIndex: 20,
             opacity: 1,
             transition: {
-                duration: 0.6,
+                duration: 0.8, // Slightly slower for heavy book feel
                 ease: [0.645, 0.045, 0.355, 1.0],
             },
         },
         exit: (direction: number) => ({
             rotateY: direction === 1 ? -180 : 0,
-            zIndex: direction === 1 ? 30 : 10, // Next: Exit (flipping away) starts on top
-            opacity: direction === 1 ? 0 : 1, // Only fade out if moving away
+            zIndex: direction === 1 ? 30 : 10,
+            opacity: direction === 1 ? 0 : 1,
             transition: {
-                duration: 0.6,
+                duration: 0.8,
                 ease: [0.645, 0.045, 0.355, 1.0],
             },
         }),
@@ -89,64 +101,95 @@ export const BookFlip = ({ items }: BookFlipProps) => {
 
     return (
         <div className="flex flex-col items-center justify-center w-full py-10 perspective-[2000px] select-none">
-            <div className="relative w-[320px] h-[480px] md:w-[640px] md:h-[520px] flex items-center justify-center preserve-3d">
 
-                {/* Book Cover / Backing */}
-                <div className="absolute inset-0 bg-[#2e2e2e] rounded-lg transform translate-z-[-20px] shadow-2xl skew-x-1 origin-bottom" style={{ transform: "translateZ(-20px) rotateX(10deg)" }}>
-                    <div className="absolute bottom-[-10px] left-[2%] w-[96%] h-[10px] bg-[#e3e3e3] rounded-b-sm shadow-inner" />
-                    <div className="absolute right-[-10px] top-[2%] w-[10px] h-[96%] bg-[#e3e3e3] rounded-r-sm shadow-inner" />
+            {/* 3D BOOK CONTAINER */}
+            <div className="relative w-[320px] h-[480px] md:w-[640px] md:h-[520px] isolate">
+
+                {/* --- Back Cover (The Physical Binding) --- */}
+                <div
+                    className="absolute top-0 bottom-0 left-[-10px] right-[-10px] bg-[#2e2e2e] rounded-lg shadow-2xl skew-x-1 origin-bottom -z-30"
+                    style={{
+                        transform: "translateZ(-25px) rotateX(15deg)",
+                        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.7)"
+                    }}
+                >
+                    {/* Fake page block visible from bottom */}
+                    <div className="absolute bottom-[-14px] left-[2%] w-[96%] h-[14px] bg-[#e3e3e3] rounded-b-sm shadow-inner opacity-90" />
+                    {/* Fake page block visible from side */}
+                    <div className="absolute right-[-14px] top-[2%] w-[14px] h-[96%] bg-[#e3e3e3] rounded-r-sm shadow-inner opacity-90" />
                 </div>
 
-                {/* The Open Book Container */}
-                <div className="relative w-full h-full flex bg-[#fdfbf6] rounded-md shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden preserve-3d">
+
+                {/* --- Main Pages Container --- */}
+                <div className="relative w-full h-full flex bg-transparent preserve-3d">
 
                     {/* SPINE */}
-                    <div className="absolute left-[50%] top-0 bottom-0 w-[40px] -ml-[20px] z-30 h-full preserve-3d">
-                        <div className="w-full h-full bg-gradient-to-r from-neutral-800 via-neutral-600 to-neutral-800 rounded-sm shadow-inner" />
-                        <div className="absolute top-10 left-[50%] -translate-x-1/2 w-[2px] h-[90%] border-l-2 border-dashed border-white/20" />
+                    <div className="absolute left-[50%] top-0 bottom-0 w-[48px] -ml-[24px] z-50 h-full preserve-3d pointer-events-none">
+                        {/* Spine Gradient - Simulating roundness */}
+                        <div className="w-full h-full bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 rounded-sm shadow-inner" />
+                        {/* Binding Details */}
+                        <div className="absolute top-[5%] left-[50%] -translate-x-1/2 w-[2px] h-[90%] border-l-2 border-dashed border-white/20" />
+                        <div className="absolute bottom-[5%] left-[50%] -translate-x-1/2 w-full h-[1px] bg-white/10" />
+                        <div className="absolute top-[5%] left-[50%] -translate-x-1/2 w-full h-[1px] bg-white/10" />
                     </div>
 
-                    {/* STATIC LEFT PAGE (Underneath) */}
-                    <div className="relative flex-1 bg-[#fdfbf6] overflow-hidden border-r border-[#e0e0e0]">
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50" />
-                        <div className="p-8 flex flex-col h-full relative z-10 opacity-70">
+                    {/* --- LEFT STACK (Static) --- */}
+                    <div className="relative flex-1 bg-[#fdfbf6] rounded-l-md border-r border-[#e0e0e0] z-0">
+                        <PageStack side="left" count={Math.min(currentPage, 5)} /> {/* Dynamic stack height */}
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 rounded-l-md" />
+
+                        {/* Content */}
+                        <div className="p-8 flex flex-col h-full relative z-10 opacity-60 overflow-hidden">
                             {leftStackItem ? (
-                                <>
-                                    <span className="font-serif text-xs text-gray-500 tracking-widest uppercase mb-4">Previous: {leftStackItem.title}</span>
-                                    <div className="w-full h-32 relative grayscale opacity-50 mb-4 rounded overflow-hidden">
+                                <div className="flex flex-col h-full">
+                                    <span className="font-serif text-xs text-gray-400 tracking-widest uppercase mb-4 border-b border-gray-200 pb-2">Archived: {leftStackItem.title}</span>
+                                    <div className="w-full h-32 relative grayscale opacity-70 mb-4 rounded overflow-hidden">
                                         <Image src={leftStackItem.img} alt={leftStackItem.title} fill className="object-cover" />
                                     </div>
-                                    <p className="text-xs text-gray-400 font-serif line-clamp-6">{leftStackItem.description}</p>
-                                    <span className="mt-auto text-center font-mono text-xs text-gray-400">{items.indexOf(leftStackItem) + 1}</span>
-                                </>
+                                    <p className="text-xs text-gray-400 font-serif line-clamp-[8] leading-relaxed">{leftStackItem.description}</p>
+                                    <span className="mt-auto text-center font-mono text-xs text-gray-300">{items.indexOf(leftStackItem) + 1}</span>
+                                </div>
                             ) : (
-                                <div className="flex flex-col items-center justify-center h-full text-gray-300 font-serif italic text-center p-10">
-                                    Start of Playbooks
+                                <div className="flex flex-col items-center justify-center h-full text-gray-300 font-serif italic text-center p-10 select-none pointer-events-none">
+                                    <div className="w-16 h-16 rounded-full border-4 border-gray-200 mb-4 flex items-center justify-center opacity-50">
+                                        <span className="text-2xl">Start</span>
+                                    </div>
+                                    The Beginning of<br />Your Journey
                                 </div>
                             )}
                         </div>
+                        {/* Shadow from Spine */}
+                        <div className="absolute right-0 top-0 bottom-0 w-[40px] bg-gradient-to-l from-black/10 to-transparent pointer-events-none z-20" />
                     </div>
 
-                    {/* STATIC RIGHT PAGE (Underneath - showing NEXT item) */}
-                    <div className="relative flex-1 bg-white overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50" />
-                        <div className="p-8 flex flex-col h-full relative z-10">
+
+                    {/* --- RIGHT STACK (Static) --- */}
+                    <div className="relative flex-1 bg-white rounded-r-md z-0">
+                        <PageStack side="right" count={Math.min(items.length - currentPage - 1, 5)} /> {/* Dynamic stack height */}
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 rounded-r-md" />
+
+                        {/* Content */}
+                        <div className="p-8 flex flex-col h-full relative z-10 overflow-hidden">
                             {rightStackItem ? (
-                                <>
-                                    <div className="w-full h-48 relative mb-6 rounded-sm overflow-hidden border-[6px] border-white shadow-sm">
+                                <div className="flex flex-col h-full opacity-60 blur-[0.5px]"> {/* Slightly blurred to indicate depth */}
+                                    <div className="w-full h-48 relative mb-6 rounded-sm overflow-hidden border-[4px] border-white shadow-sm">
                                         <Image src={rightStackItem.img} alt={rightStackItem.title} fill className="object-cover" />
                                     </div>
-                                    <h2 className="text-2xl font-bold font-serif text-neutral-800 mb-3">{rightStackItem.title}</h2>
-                                    <span className="mt-auto text-right font-mono text-xs text-gray-400">{items.indexOf(rightStackItem) + 1}</span>
-                                </>
+                                    <h2 className="text-2xl font-bold font-serif text-neutral-400 mb-3">{rightStackItem.title}</h2>
+                                    <span className="mt-auto text-right font-mono text-xs text-gray-300">{items.indexOf(rightStackItem) + 1}</span>
+                                </div>
                             ) : (
-                                <div className="flex flex-col items-center justify-center h-full text-gray-300 font-serif italic text-center">End of Playbooks</div>
+                                <div className="flex flex-col items-center justify-center h-full text-gray-300 font-serif italic text-center select-none pointer-events-none">
+                                    <div className="opacity-50">End of Playbooks</div>
+                                </div>
                             )}
                         </div>
+                        {/* Shadow from Spine */}
+                        <div className="absolute left-0 top-0 bottom-0 w-[40px] bg-gradient-to-r from-black/10 to-transparent pointer-events-none z-20" />
                     </div>
 
 
-                    {/* FLIPPING PAGE (Animation Layer) */}
+                    {/* --- ANIMATION LAYER (Flipping Page) --- */}
                     <AnimatePresence
                         initial={false}
                         mode="popLayout"
@@ -166,7 +209,7 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                 perspective: "2000px"
                             }}
                         >
-                            {/* The Inner Flipping Element - Half Width (Right Side) */}
+                            {/* The Flipping Page Element */}
                             <motion.div
                                 className="w-[50%] h-full relative pointer-events-auto"
                                 style={{
@@ -174,11 +217,23 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                     transformStyle: "preserve-3d",
                                 }}
                             >
-                                {/* FRONT FACE (Current Page Content) */}
-                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-6 md:p-8 border-l border-neutral-100">
-                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 pointer-events-none" />
+                                {/* FRONT FACE (Current Page) */}
+                                <div className="absolute inset-0 bg-[#fffefb] backface-hidden flex flex-col p-6 md:p-8 border-l border-neutral-100 rounded-r-sm overflow-hidden transform-style-3d">
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 pointer-events-none" />
+
+                                    {/* Dynamic Lighting Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-black/5 pointer-events-none z-50 mix-blend-overlay" />
 
                                     <div className="relative z-10 flex flex-col h-full">
+                                        <div className="w-full flex justify-between items-center mb-6 border-b-2 border-neutral-100 pb-2">
+                                            <span className="font-serif text-xs text-neutral-400 tracking-widest uppercase">Chapter {currentPage + 1}</span>
+                                            <div className="flex gap-1">
+                                                <div className="w-2 h-2 rounded-full bg-red-400/50" />
+                                                <div className="w-2 h-2 rounded-full bg-yellow-400/50" />
+                                                <div className="w-2 h-2 rounded-full bg-green-400/50" />
+                                            </div>
+                                        </div>
+
                                         <div className="w-full h-48 relative mb-6 rounded-sm overflow-hidden shadow-md border-[6px] border-white transform rotate-1 hover:rotate-0 transition-transform duration-300">
                                             <Image src={currentItem.img} alt={currentItem.title} fill className="object-cover" />
                                         </div>
@@ -195,26 +250,38 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                                                 target="_blank"
                                                 className="group flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-neutral-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                                             >
-                                                Read Guide
-                                                <IconArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                                {currentPage === items.length - 1 ? (
+                                                    <span className="flex items-center gap-2">Support Now <IconCoffee size={14} className="group-hover:rotate-12 transition-transform" /></span>
+                                                ) : (
+                                                    <span className="flex items-center gap-2">Read Guide <IconArrowRight size={14} className="group-hover:translate-x-1 transition-transform" /></span>
+                                                )}
                                             </a>
                                         </div>
                                     </div>
+                                    {/* Spine Shadow on Page */}
+                                    <div className="absolute left-0 top-0 bottom-0 w-[15px] bg-gradient-to-r from-black/10 to-transparent pointer-events-none z-20" />
                                 </div>
 
-                                {/* BACK FACE (Previous Page Visual) */}
+                                {/* BACK FACE (Previous State Visual) */}
                                 <div
-                                    className="absolute inset-0 bg-[#fdfbf6] backface-hidden flex flex-col p-8 border-r border-neutral-200"
+                                    className="absolute inset-0 bg-[#fdfbf6] backface-hidden flex flex-col p-8 border-r border-neutral-200 rounded-l-sm overflow-hidden"
                                     style={{ transform: "rotateY(180deg)" }}
                                 >
-                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 pointer-events-none" />
-                                    <div className="relative z-10 flex flex-col h-full opacity-40 grayscale">
+                                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-60 pointer-events-none" />
+
+                                    {/* Dynamic Lighting Overlay for Back Face */}
+                                    <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/20 to-black/5 pointer-events-none z-50 mix-blend-overlay" />
+
+                                    <div className="relative z-10 flex flex-col h-full opacity-50 grayscale">
                                         <h3 className="text-xl font-bold font-serif text-neutral-800 mb-4">{currentItem.title}</h3>
                                         <div className="w-full h-40 relative rounded bg-gray-200 mb-4 overflow-hidden">
                                             <Image src={currentItem.img} alt={currentItem.title} fill className="object-cover" />
                                         </div>
                                         <p className="text-xs font-serif text-neutral-500 line-clamp-4">{currentItem.description}</p>
+                                        <div className="mt-auto text-center font-mono text-xs text-gray-400">{currentPage + 1}</div>
                                     </div>
+                                    {/* Spine Shadow on Page */}
+                                    <div className="absolute right-0 top-0 bottom-0 w-[15px] bg-gradient-to-l from-black/10 to-transparent pointer-events-none z-20" />
                                 </div>
                             </motion.div>
 
@@ -224,28 +291,30 @@ export const BookFlip = ({ items }: BookFlipProps) => {
                 </div>
             </div>
 
-            {/* Controls */}
-            <div className="flex items-center gap-6 mt-12 z-50">
+            {/* Modern Controls */}
+            <div className="flex items-center gap-8 mt-16 z-50">
                 <button
                     onClick={handlePrev}
                     disabled={currentPage === 0 || isAnimating}
-                    className="group relative px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-all overflow-hidden"
+                    className="group relative flex flex-col items-center gap-2 p-2 disabled:opacity-30 disabled:pointer-events-none transition-opacity"
                 >
-                    <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                    <span className="relative flex items-center gap-2">
-                        <IconArrowLeft size={18} /> Previous
-                    </span>
+                    <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center group-hover:bg-white/10 group-hover:scale-110 transition-all">
+                        <IconArrowLeft size={20} className="text-white" />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity -translate-y-2 group-hover:translate-y-0">Prev</span>
                 </button>
-                <div className="w-px h-8 bg-white/20" />
+
+                <div className="h-px w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
                 <button
                     onClick={handleNext}
                     disabled={currentPage === items.length - 1 || isAnimating}
-                    className="group relative px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-transparent transition-all overflow-hidden"
+                    className="group relative flex flex-col items-center gap-2 p-2 disabled:opacity-30 disabled:pointer-events-none transition-opacity"
                 >
-                    <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                    <span className="relative flex items-center gap-2">
-                        Next <IconArrowRight size={18} />
-                    </span>
+                    <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center group-hover:bg-white/10 group-hover:scale-110 transition-all">
+                        <IconArrowRight size={20} className="text-white" />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity -translate-y-2 group-hover:translate-y-0">Next</span>
                 </button>
             </div>
         </div>
