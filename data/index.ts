@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
   { name: "Work Experience", link: "#work" },
+  { name: "Projects", link: "#projects" },
   { name: "Coding Profiles", link: "#code" },
   { name: "Contact", link: "#contact" },
 ];
@@ -77,7 +77,7 @@ export const projects = [
     des: "Build, connect, and deploy AI workflows visually — once you see it, you won’t go back",
     img: "/weaave.jpg",
     iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/weaave",
+    link: "https://weaave.vercel.app/",
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ export const projects = [
     des: "Open, full-stack link-in-bio platform focused on simplicity, customization, and analytics",
     img: "/minilink.png",
     iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/MiniLink",
+    link: "https://minianonlink.vercel.app/",
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const projects = [
     des: "Your AI Wingman for the digital age – never get left on read again",
     img: "/minirizz.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://github.com/TuShArBhArDwA/minirizz",
+    link: "https://minirizz.vercel.app/",
   },
   {
     id: 4,
@@ -101,7 +101,7 @@ export const projects = [
     des: "AI-driven interview preparation with mock interviews and feedback",
     img: "/pulse.png",
     iconLists: ["/react.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/PulseAI",
+    link: "https://ai-interview-platform-pink.vercel.app/",
   },
   {
     id: 5,
@@ -109,7 +109,7 @@ export const projects = [
     des: "Full-stack job portal for job discovery, applications, and recruiter postings",
     img: "/hire.png",
     iconLists: ["/react.jfif", "/cloudName.svg", "/js.png", "/tail.svg", "/html.png", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/HireMe",
+    link: "https://hireeme.vercel.app/",
   },
   {
     id: 6,
@@ -117,7 +117,7 @@ export const projects = [
     des: "Personal, ad-free music player for uploading tracks, building playlists, and streaming",
     img: "/beats.jpg",
     iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/AnonBeats",
+    link: "https://anon-beats.vercel.app/",
   },
   {
     id: 7,
@@ -125,7 +125,7 @@ export const projects = [
     des: "Minimal 2D canvas for ideas with instant cloud persistence",
     img: "/canvas.png",
     iconLists: ["/react.jfif", "/firebase.jpg", "/js.png", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/Canvas-Editor",
+    link: "https://simple-canvas-editor.vercel.app/",
   },
   {
     id: 8,
@@ -133,7 +133,7 @@ export const projects = [
     des: "An interactive maze generator and solver with multiple algorithms",
     img: "/path.png",
     iconLists: ["/js.png", "/css.jpeg", "/html.png", "/vercel.png"],
-    link: "https://github.com/TuShArBhArDwA/MazeSolver",
+    link: "https://mazesolve.vercel.app/",
   },
 ];
 
@@ -143,56 +143,49 @@ export const articles = [
     id: 1,
     title: "How I Secured a Microsoft Software Engineer Internship (2025)",
     des: "A detailed breakdown of my preparation strategy, interview rounds, and tips for cracking the Microsoft internship process.",
-    img: "/p1.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/microsoft.webp",
     link: "https://medium.com/@bhardwajtushar2004/microsoft-swe-intern-hyderabad-bengaluru-noida-sep-2024-offer-28f71a07adce",
   },
   {
     id: 2,
     title: "I Was Tired of Ugly Bio Links, So I Built My Own",
     des: "The story behind building MiniLink using Next.js and Tailwind CSS to create a customizable and beautiful link-in-bio tool.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/minianonlink.jpg",
     link: "https://medium.com/@bhardwajtushar2004/i-was-tired-of-ugly-bio-links-so-i-built-my-own-b5499b60bd70",
   },
   {
     id: 3,
     title: "Stripe Technical Team Screen Interview Experience",
     des: "Sharing my experience with Stripe's technical screening, the questions asked, and how I approached the problem-solving aspect.",
-    img: "/p3.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/stripe.png",
     link: "https://medium.com/@bhardwajtushar2004/stripe-technical-team-screen-interview-experience-3a6a9f958075",
   },
   {
     id: 4,
     title: "CRED Backend Intern: Machine Coding Round Interview Experience",
     des: "Insights into the CRED machine coding round, focusing on code quality, design patterns, and handling edge cases effectively.",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/cred.jfif",
     link: "https://medium.com/@bhardwajtushar2004/cred-backend-intern-machine-coding-round-interview-experience-66a3e28abb90",
   },
   {
     id: 5,
     title: "Inside Eightfold.ai’s Agentic AI Internship Hiring Process (2026)",
     des: "My journey through the Eightfold.ai hiring process for the Agentic AI role, covering the assessment and interview stages.",
-    img: "/p1.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/eightfold.png",
     link: "https://medium.com/@bhardwajtushar2004/inside-eightfold-ais-agentic-ai-internship-hiring-process-2026-f86dcb625aa8",
   },
   {
     id: 6,
     title: "Optum Data Engineering Interview Experience (Mumbai)",
     des: "A comprehensive review of the Optum Data Engineering interview loop, including database concepts, SQL queries, and system design.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/optum.png",
     link: "https://medium.com/@bhardwajtushar2004/optum-data-engineering-interview-experience-mumbai-818b53371fde",
   },
   {
     id: 7,
     title: "Trilogy Innovations Winter Internship 2026: On-Campus Interview Experience",
     des: "Recounting my on-campus interview experience with Trilogy Innovations, highlighting the challenging technical questions and rapid problem solving.",
-    img: "/p3.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    img: "/trilogy.jfif",
     link: "https://medium.com/@bhardwajtushar2004/trilogy-innovations-winter-internship-2026-on-campus-interview-experience-7f2e243ac1c6",
   },
 ];
@@ -346,7 +339,7 @@ export const codingProfiles = [
     url: "https://leetcode.com/u/Tusharr2004/",
     logo: "/leetcode-logo.svg",
     statsImage: "/leetcode.jpg",
-    description: "Solved over 1120 questions with a streak of 800 days.",
+    description: "Solved over 1150 questions with a streak of 840 days.",
   },
   {
     id: 2,
@@ -354,7 +347,7 @@ export const codingProfiles = [
     url: "https://www.geeksforgeeks.org/user/tusharbhard2004/",
     logo: "/gfg-logo.svg",
     statsImage: "/gfg.jpg",
-    description: "Institute Rank 32, solved 750 questions with a streak of 630 days.",
+    description: "Institute Rank 30, solved 775 ques with a streak of 670 days.",
   },
   {
     id: 3,
@@ -363,7 +356,7 @@ export const codingProfiles = [
     logo: "/codelogo.svg",
     statsImage: "/codechef.jpg",
     // logo: "/codechef.jfif",
-    description: "Div 3, Solved over 450 problems with a streak of 1000 days.",
+    description: "Div 3, Solved over 450 problems with a streak of 1040 days.",
   },
   {
     id: 4,
@@ -371,7 +364,7 @@ export const codingProfiles = [
     url: "https://www.naukri.com/code360/profile/Bhar_dwajTushar",
     logo: "/cnlogo.svg",
     statsImage: "/codingninjas.jpg",
-    description: "630-day streak, solved over 735 MCQs and 75 coding problems.",
+    description: "675-day streak, solved over 740 MCQs and 75 coding problems.",
   },
 ];
 

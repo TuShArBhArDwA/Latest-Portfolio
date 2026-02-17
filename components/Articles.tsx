@@ -49,7 +49,7 @@ const RecentArticles = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover pointer-events-none"
+                    className="w-full h-full object-contain pointer-events-none"
                   />
                 </a>
               </div>

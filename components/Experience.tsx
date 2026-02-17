@@ -61,7 +61,7 @@ const Experience = () => {
   }));
 
   return (
-    <div className="py-20 w-full" id="work">
+    <div className="py-20 w-full mt-20" id="work">
       <h1 className="heading mb-10">
         My <span className="text-purple">work experience</span>
       </h1>
