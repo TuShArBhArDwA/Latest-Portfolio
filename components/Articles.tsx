@@ -24,7 +24,7 @@ const RecentArticles = () => {
   }, []);
 
   return (
-    <div className="py-20 relative w-full flex flex-col items-center justify-center overflow-hidden" id="articles">
+    <div className="py-10 relative w-full flex flex-col items-center justify-center overflow-hidden" id="articles">
       <h1 className="heading mb-10 z-50">
         Learn From <span className="text-purple">My Experience</span>
       </h1>

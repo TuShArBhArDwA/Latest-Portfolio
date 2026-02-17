@@ -66,7 +66,7 @@ const MemeCat = () => {
 
         setStateSynced('walking');
 
-        const catSize = isMobile ? 80 : 112;
+        const catSize = isMobile ? 56 : 80;
         // Pick a random edge: 0=Top, 1=Right, 2=Bottom, 3=Left
         const edge = Math.floor(Math.random() * 4);
 
@@ -266,7 +266,7 @@ const MemeCat = () => {
                     <motion.div
                         animate={{ scaleX: direction }}
                         transition={{ duration: 0.1 }}
-                        className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-purple/60 shadow-[0_0_15px_rgba(139,92,246,0.3)] bg-black-200/50 p-1"
+                        className="relative w-14 h-14 md:w-20 md:h-20 rounded-full border-2 border-purple/60 shadow-[0_0_15px_rgba(139,92,246,0.3)] bg-black-200/50 p-1"
                     >
                         <Image
                             src={getCatImage()}

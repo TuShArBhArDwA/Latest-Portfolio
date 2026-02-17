@@ -5,7 +5,7 @@ import { Compare } from "./ui/compare";
 
 const CodingProfiles = () => {
   return (
-    <div className="py-20 w-full" id="code">
+    <div className="py-10 w-full" id="code">
       <h1 className="heading text-center text-4xl font-semibold text-gray-900 dark:text-white mb-16">
         My <span className="text-purple">Coding Profiles</span>
       </h1>

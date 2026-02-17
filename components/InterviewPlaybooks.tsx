@@ -4,7 +4,7 @@ import React from "react";
 
 const InterviewPlaybooks = () => {
     return (
-        <div className="py-20 w-full relative" id="playbooks">
+        <div className="py-10 w-full relative" id="playbooks">
             {/* Subtle background glow */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-[600px] h-[400px] bg-purple/5 rounded-full blur-[120px]" />
