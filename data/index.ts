@@ -71,6 +71,22 @@ export const gridItems = [
 
 export const projects = [
   {
+    id: 9,
+    title: "MiniMock",
+    des: "Instant chat, social media, and AI mockups. No data saved. No watermark. Easy to use.",
+    img: "/minimock.jpg",
+    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    link: "https://minianonmock.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "MiniLink",
+    des: "Create your link-in-bio page in seconds. Free forever.",
+    img: "/minilink.png",
+    iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
+    link: "https://minianonlink.vercel.app/",
+  },
+  {
     id: 1,
     title: "Weaave",
     des: "Build, connect, and deploy AI workflows visually — once you see it, you won’t go back",
@@ -78,14 +94,7 @@ export const projects = [
     iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
     link: "https://weaave.vercel.app/",
   },
-  {
-    id: 2,
-    title: "MiniLink",
-    des: "Open, full-stack link-in-bio platform focused on simplicity, customization, and analytics",
-    img: "/minilink.png",
-    iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
-    link: "https://minianonlink.vercel.app/",
-  },
+  
   {
     id: 3,
     title: "MiniRizz",
