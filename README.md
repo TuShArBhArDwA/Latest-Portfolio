@@ -148,6 +148,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 If you'd like to connect, feel free to reach out — [Click here](https://minianonlink.vercel.app/tusharbhardwaj)
 
-### Acknowledgements
+---
 
-Thank you to all the open-source projects and tools that made this portfolio possible. Special thanks to the developers of Next.js, Three.js, React Three Fiber, Framer Motion, and Tailwind CSS.
+**[Visit Portfolio](https://tusharbhardwaj.vercel.app/)** | **[Submit Feedback](https://github.com/TuShArBhArDwA/Portfolio/issues)**
