@@ -32,13 +32,13 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center px-4 md:px-12">
-        <p className="md:text-base text-sm md:font-normal font-light">
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-y-6 px-4 md:px-12">
+        <p className="md:text-base text-sm md:font-normal font-light text-center">
           Copyright © 2026 <a href="https://buymeacoffee.com/tusharbhardwaj" target="_blank" rel="noopener noreferrer" className="text-purple font-semibold hover:text-purple/80 transition-colors">Tushar Bhardwaj</a>
         </p>
 
-        <div className="flex items-center gap-4 mt-6 md:mt-0">
-          <p className="md:text-base text-sm md:font-normal font-light hidden sm:block">Find me on</p>
+        <div className="flex items-center justify-center gap-4">
+          <p className="md:text-base text-sm md:font-normal font-light">Find me on</p>
           <Link href="https://minianonlink.vercel.app/tusharbhardwaj" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-2 rounded-full border border-white/20 bg-black-200/50 text-purple font-semibold hover:text-purple/80 hover:bg-white/10 hover:border-white/40 transition-all flex items-center justify-center gap-2 backdrop-blur-sm shadow-md">
               MiniLink
