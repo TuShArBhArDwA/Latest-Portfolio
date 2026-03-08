@@ -1,6 +1,7 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import Image from "next/image";
 
 interface SlideData {
     title: string;
@@ -102,9 +103,10 @@ export const Card = ({
                 }}
             ></div>
             <div className="absolute inset-0 z-0 transition duration-300 group-hover:scale-110">
-                <img
+                <Image
                     src={slide.src}
                     alt={slide.title}
+                    fill
                     className="h-full w-full object-cover rounded-3xl"
                 />
             </div>

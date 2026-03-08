@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Image from "next/image";
 
 interface CompareProps {
     firstImage: string;
@@ -60,8 +61,9 @@ export const Compare = ({
             onMouseLeave={handleMouseLeave}
         >
             {/* Second Image (Background/Underneath) */}
-            <img
+            <Image
                 src={secondImage}
+                fill
                 className={cn(
                     "absolute top-0 left-0 w-full h-full object-cover object-left-top",
                     secondImageClassname
@@ -78,8 +80,9 @@ export const Compare = ({
                 }}
                 transition={{ duration: 0 }} // Instant update for responsiveness
             >
-                <img
+                <Image
                     src={firstImage}
+                    fill
                     className={cn(
                         "absolute top-0 left-0 w-full h-full object-cover object-left-top select-none",
                         firstImageClassName
