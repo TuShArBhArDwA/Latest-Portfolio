@@ -35,9 +35,9 @@ This project showcases my skills, projects, and experience through an interactiv
 - **Coding Profiles**: A compare-slider section for platforms like GitHub, LeetCode, CodeChef, and Coding Ninjas — slide to reveal platform stats behind each logo, with direct profile links.
 - **Articles (Draggable Cards)**: Published articles presented as draggable, physics-based cards scattered across a canvas. Drag to explore, click to read.
 - **Interview Playbooks**: Curated interview prep guides rendered as an interactive book-flip component with a subtle background glow effect.
-- **Canvas Effect**: Innovative use of HTML5 canvas to create visually striking effects in the "Approach" section, adding a unique touch to the presentation.
+- **Testimonials Section**: A premium section displaying verified testimonials as modern cards, complete with a call-to-action button linking to the full testimonial wall on MiniVouch.
 - **MemeCat (Mini Anon)**: An interactive cat mascot that falls onto the page, roams the screen edges, and mumbles random thoughts. Click to open a Q&A modal where "Mini Anon" answers questions about me — complete with a "Buy me pet food" link.
-- **Footer with Floating Dock & Text Flip**: A contact-focused footer featuring animated text flipping ("digital presence", "business goals", "tech stack", "user experience"), a floating social-media dock (GitHub, Twitter, LinkedIn, YouTube, Medium), and a magic "Let's get in touch" button.
+- **Footer with Text Flip & MiniLink**: A contact-focused footer featuring animated text flipping ("digital presence", "business goals", "tech stack", "user experience"), a sleek "Find me on MiniLink" button, and a Topmate "Book a Call" CTA.
 - **Responsiveness**: Fully mobile-optimized — compact cards, touch-friendly interactions, and adaptive layouts across all screen sizes.
 
 ## Tech Stack
@@ -123,10 +123,11 @@ Open your browser and go to [http://localhost:3000](http://localhost:3000) to vi
 │   ├── CodingProfiles.tsx    # Coding platform profiles
 │   ├── Articles.tsx          # Draggable article cards
 │   ├── InterviewPlaybooks.tsx# Interview prep book-flip
-│   ├── Approach.tsx          # Canvas-based approach section
+│   ├── TestimonialsSection.tsx# Verified community testimonials
+│   ├── TestimonialCard.tsx   # Premium testimonial card component
 │   ├── MemeCat.tsx           # Interactive cat mascot
 │   ├── NavbarWrapper.tsx     # Navbar with mobile support
-│   ├── Footer.tsx            # Footer with floating dock
+│   ├── Footer.tsx            # Footer with MiniLink & Text Flip
 │   └── Grid.tsx              # Bento grid layout
 ├── data/                 # Static data (projects, experience, profiles, etc.)
 ├── hooks/                # Custom React hooks

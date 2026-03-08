@@ -4,7 +4,7 @@ import RecentProjects from "@/components/RecentProjects";
 import Articles from "@/components/Articles";
 // import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
-import Approach from "@/components/Approach";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { navItems } from "@/data";
 import CodingProfiles from "@/components/CodingProfiles";
@@ -24,7 +24,7 @@ export default function Home() {
         <CodingProfiles />
         <Articles />
         <InterviewPlaybooks />
-        <Approach />
+        <TestimonialsSection />
         <Footer />
       </div>
       <MemeCat />

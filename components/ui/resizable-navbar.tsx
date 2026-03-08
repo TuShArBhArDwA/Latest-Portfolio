@@ -97,7 +97,7 @@ export const NavbarLogo = ({ className }: { className?: string }) => {
         <Link href="/" className={cn("flex items-center gap-2.5 shrink-0", className)}>
             <div className="w-7 h-7 rounded-full overflow-hidden ring-1 ring-purple/40 shadow-sm">
                 <Image
-                    src="/favicon.svg"
+                    src="/favicon.jpeg"
                     alt="Logo"
                     width={28}
                     height={28}

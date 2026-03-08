@@ -1,5 +1,5 @@
 "use client";
-import { FaLocationArrow } from "react-icons/fa"
+import { FaLocationArrow, FaArrowDown, FaExternalLinkAlt } from "react-icons/fa"
 import MagicButton from "./ui/MagicButton"
 import { Spotlight } from "./ui/Spotlight"
 import { motion, AnimatePresence } from "framer-motion"
@@ -88,10 +88,15 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.1, duration: 0.5 }}
-                        className="flex items-center gap-4 mt-10 z-20"
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 z-20 w-full"
                     >
-                        <a href="#projects">
-                            <MagicButton title="View Projects" icon={<FaLocationArrow />} position="right" />
+                        <a href="#projects" className="w-full sm:w-auto flex justify-center">
+                            <MagicButton title="View Projects" icon={<FaArrowDown />} position="right" />
+                        </a>
+                        <a href="https://drive.google.com/file/d/1LNtZwuccrrcKpyhu_-gnnZ4wOujIIpX2/view" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex justify-center">
+                            <button className="relative inline-flex h-12 w-full overflow-hidden rounded-lg border border-white/20 bg-white/5 px-7 text-sm font-medium text-white hover:bg-white/10 transition-colors focus:outline-none md:w-60 items-center justify-center gap-2 backdrop-blur-sm">
+                                View Resume <FaExternalLinkAlt />
+                            </button>
                         </a>
                     </motion.div>
 
