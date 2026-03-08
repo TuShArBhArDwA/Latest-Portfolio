@@ -74,7 +74,7 @@ export const projects = [
     id: 9,
     title: "MiniMock",
     des: "Instant chat, social media, and AI mockups. No data saved. No watermark. Easy to use.",
-    img: "/minimock.jpg",
+    img: "/minianonmock.jpg",
     iconLists: ["/next.svg", "/ts.svg", "/vercel.png"],
     link: "https://minianonmock.vercel.app/",
   },
