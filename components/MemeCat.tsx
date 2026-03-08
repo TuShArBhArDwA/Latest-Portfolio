@@ -127,7 +127,7 @@ const MemeCat = () => {
         } catch {
             // Animation was stopped (hover or modal)
         }
-    }, [controls, dimensions, isMobile, modalOpen, setStateSynced]);
+    }, [controls, dimensions, isMobile, setStateSynced]);
 
     // Initial Fall
     useEffect(() => {
@@ -161,7 +161,7 @@ const MemeCat = () => {
         startFall();
 
         return () => clearAllTimeouts();
-    }, [dimensions.width]);
+    }, [dimensions.width, dimensions.height, controls, setStateSynced, startRoaming, clearAllTimeouts]);
 
     // Handle hover start
     const handleMouseEnter = useCallback(() => {
@@ -210,7 +210,7 @@ const MemeCat = () => {
             default:
                 return "/cat-walk.gif";
         }
-    }, [state]); // state dependency to trigger re-render
+    }, []); // state dependency removed as it uses stateRef.current
 
     // Track position via onUpdate
     const handleAnimationUpdate = useCallback((latest: { [key: string]: string | number }) => {

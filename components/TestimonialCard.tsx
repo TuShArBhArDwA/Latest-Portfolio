@@ -7,7 +7,7 @@ export const TestimonialCard = ({ quote, author }: { quote: string, author: stri
       <div className="absolute opacity-0 group-hover:opacity-10 transition-opacity duration-300 top-0 left-0 w-full h-full bg-gradient-to-br from-purple to-transparent pointer-events-none" />
 
       <p className="text-neutral-700 dark:text-neutral-300 text-base md:text-lg tracking-wide mb-8 italic relative z-10">
-        "{quote}"
+        &quot;{quote}&quot;
       </p>
 
       <div className="mt-auto flex items-center gap-4 relative z-10">

@@ -4,6 +4,7 @@ import { projects } from "@/data";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { Button } from "./ui/moving-border";
 import Link from "next/link";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -35,13 +36,12 @@ const RecentProjects = () => {
                 </CardItem>
                 <CardItem
                   translateZ="100"
-                  className="w-full mt-4"
+                  className="w-full mt-4 relative h-60"
                 >
-                  <img
+                  <Image
                     src={item.img}
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    fill
+                    className="object-cover rounded-xl group-hover/card:shadow-xl"
                     alt={item.title}
                   />
                 </CardItem>
@@ -68,7 +68,7 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon" className="p-2" />
+                        <Image src={icon} alt="icon" width={32} height={32} className="p-2" />
                       </div>
                     ))}
                   </CardItem>
