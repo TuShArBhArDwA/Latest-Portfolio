@@ -4,6 +4,7 @@ import { articles } from "@/data";
 import { DraggableCardBody, DraggableCardContainer } from "./ui/draggable-card";
 import { cn } from "@/utils/cn";
 import { useMemo, useRef } from "react";
+import Image from "next/image";
 
 const RecentArticles = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -46,10 +47,11 @@ const RecentArticles = () => {
             >
               <div className="relative w-full h-40 overflow-hidden rounded-xl mb-4 group-hover/card:shadow-xl transition-shadow duration-300">
                 <a href={item.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-contain pointer-events-none"
+                    fill
+                    className="object-contain pointer-events-none"
                   />
                 </a>
               </div>
