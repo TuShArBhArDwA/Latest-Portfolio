@@ -75,7 +75,7 @@ export const projects = [
     title: "MiniMock",
     des: "Instant chat, social media, and AI mockups. No data saved. No watermark. Easy to use.",
     img: "/minimock.jpg",
-    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/vercel.png"],
     link: "https://minianonmock.vercel.app/",
   },
   {
@@ -83,7 +83,7 @@ export const projects = [
     title: "MiniLink",
     des: "Create your link-in-bio page in seconds. Free forever.",
     img: "/minilink.png",
-    iconLists: ["/next.jfif", "/ts.svg", "/cloud.svg", "/vercel.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/cloud.svg", "/vercel.png"],
     link: "https://minianonlink.vercel.app/",
   },
   {
@@ -91,10 +91,10 @@ export const projects = [
     title: "Weaave",
     des: "Build, connect, and deploy AI workflows visually — once you see it, you won’t go back",
     img: "/weaave.jpg",
-    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/vercel.png"],
     link: "https://weaave.vercel.app/",
   },
-  
+
   {
     id: 3,
     title: "MiniRizz",
@@ -108,7 +108,7 @@ export const projects = [
     title: "PulseAI Prep",
     des: "AI-driven interview preparation with mock interviews and feedback",
     img: "/pulse.png",
-    iconLists: ["/react.jfif", "/ts.svg", "/vercel.png"],
+    iconLists: ["/react.png", "/ts.svg", "/vercel.png"],
     link: "https://ai-interview-platform-pink.vercel.app/",
   },
   {
@@ -116,7 +116,7 @@ export const projects = [
     title: "HireMe",
     des: "Full-stack job portal for job discovery, applications, and recruiter postings",
     img: "/hire.png",
-    iconLists: ["/react.jfif", "/cloudName.svg", "/js.png", "/tail.svg", "/html.png", "/vercel.png"],
+    iconLists: ["/react.png", "/cloudName.svg", "/js.png", "/tail.svg", "/html.png", "/vercel.png"],
     link: "https://hireeme.vercel.app/",
   },
   {
@@ -124,7 +124,7 @@ export const projects = [
     title: "AnonBeats",
     des: "Personal, ad-free music player for uploading tracks, building playlists, and streaming",
     img: "/beats.jpg",
-    iconLists: ["/next.jfif", "/ts.svg", "/vercel.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/vercel.png"],
     link: "https://anon-beats.vercel.app/",
   },
   {
@@ -156,10 +156,10 @@ export const articles = [
   },
   {
     id: 2,
-    title: "I Was Tired of Ugly Bio Links, So I Built My Own",
-    des: "The story behind building MiniLink using Next.js and Tailwind CSS to create a customizable and beautiful link-in-bio tool.",
+    title: "MiniLink — The Most Customizable Link-in-Bio Platform for Developers (2026)",
+    des: "The story behind building MiniLink — a customizable link-in-bio platform for developers designed to showcase projects, social links, and personal branding with a clean and flexible UI.",
     img: "/minianonlink.jpg",
-    link: "https://medium.com/@bhardwajtushar2004/i-was-tired-of-ugly-bio-links-so-i-built-my-own-b5499b60bd70",
+    link: "https://medium.com/@bhardwajtushar2004/minilink-the-most-customizable-link-in-bio-platform-for-developers-2026-a4f0ceb94e0d",
   },
   {
     id: 3,
@@ -172,7 +172,7 @@ export const articles = [
     id: 4,
     title: "CRED Backend Intern: Machine Coding Round Interview Experience",
     des: "Insights into the CRED machine coding round, focusing on code quality, design patterns, and handling edge cases effectively.",
-    img: "/cred.jfif",
+    img: "/cred.png",
     link: "https://medium.com/@bhardwajtushar2004/cred-backend-intern-machine-coding-round-interview-experience-66a3e28abb90",
   },
   {
@@ -193,8 +193,22 @@ export const articles = [
     id: 7,
     title: "Trilogy Innovations Winter Internship 2026: On-Campus Interview Experience",
     des: "Recounting my on-campus interview experience with Trilogy Innovations, highlighting the challenging technical questions and rapid problem solving.",
-    img: "/trilogy.jfif",
+    img: "/trilogy.png",
     link: "https://medium.com/@bhardwajtushar2004/trilogy-innovations-winter-internship-2026-on-campus-interview-experience-7f2e243ac1c6",
+  },
+  {
+    id: 8,
+    title: "How to Collect Testimonials for Your Portfolio (A Simple Testimonial Wall for Developers)",
+    des: "Why testimonials matter for developers and how I built a simple testimonial wall to easily collect, manage, and display feedback on a personal portfolio.",
+    img: "/minianonvouch.png",
+    link: "https://medium.com/@bhardwajtushar2004/how-to-collect-testimonials-for-your-portfolio-a-simple-testimonial-wall-for-developers-8ceefa88d4a8",
+  },
+  {
+    id: 9,
+    title: "How to Create Realistic Chat Mockups (Without Photoshop or Watermarks) -The Modern Way",
+    des: "A guide to creating realistic chat screenshots for demos, presentations, and social media using modern tools—without Photoshop, design skills, or watermark-heavy apps.",
+    img: "/minianonmock.jpg",
+    link: "https://medium.com/@bhardwajtushar2004/how-to-create-realistic-chat-mockups-without-photoshop-or-watermarks-the-modern-way-7fd93939bdb5",
   },
 ];
 
