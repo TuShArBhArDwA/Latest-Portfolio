@@ -16,7 +16,7 @@ const Footer = () => {
           <LayoutTextFlip
             text=""
             words={["digital presence", "business goals", "tech stack", "user experience"]}
-            className="text-4xl md:text-5xl font-bold px-2 text-purple"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold px-2 text-purple"
           />
           <span>to the next level?</span>
         </h1>
