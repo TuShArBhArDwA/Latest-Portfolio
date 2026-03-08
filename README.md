@@ -57,7 +57,7 @@ This project showcases my skills, projects, and experience through an interactiv
 ## Live Demo
 
 You can view the live version of my portfolio website at:  
-[Visit my Portfolio 🌐↗](https://tushar-bhardwaj.vercel.app/)
+[Visit my Portfolio 🌐↗](https://tusharbhardwaj.vercel.app/)
 
 **Portfolio & Code Walkthrough (Loom):**  
 [Watch the Full Walkthrough ↗](https://www.loom.com/share/382db90115bd48a9ac9c4c2e4d5bf5ff)
