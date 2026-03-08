@@ -132,7 +132,7 @@ export const projects = [
     title: "Canvas Editor",
     des: "Minimal 2D canvas for ideas with instant cloud persistence",
     img: "/canvas.png",
-    iconLists: ["/react.jfif", "/firebase.jpg", "/js.png", "/vercel.png"],
+    iconLists: ["/react.png", "/firebase.jpg", "/js.png", "/vercel.png"],
     link: "https://simple-canvas-editor.vercel.app/",
   },
   {
